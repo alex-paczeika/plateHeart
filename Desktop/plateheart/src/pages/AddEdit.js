@@ -55,15 +55,18 @@ const AddEdit = () => {
         }
     };
     return (
-        <div style={{ marginTop: '100px' }}>
-            <form style={{ margin: 'auto', padding: '15px', maxWidth: '400px ', alignContent: 'center' }}
+        <div style={{ marginTop: '0px' }}>
+            <div >
+                <img className='between' src={require('./between.png')} />
+            </div>
+            <form style={{ fontSize: '50px', margin: 'auto', padding: '15px', maxWidth: '300px ', alignContent: 'center' }}
                 onSubmit={handleSubmit}>
-                <div className='namefield'>
-                    <label htmlFor='name'>Name</label>
+                <div className='namefield' >
+                    <label style={{ fontSize: '25px' }} htmlFor='name'>My name is</label>
                     <input type='text' id='name' name='name' placeholder='Your Name...' value={name} onChange={handlerInputChange}></input>
-                    <label htmlFor='plate'>Plate Number</label>
+                    <label style={{ fontSize: '25px' }} htmlFor='plate'>My plate number</label>
                     <input type='plate' id='plate' name='plate' placeholder='For ex. TM01ZZZ' value={plate.toLocaleUpperCase()} onChange={handlerInputChange}></input>
-                    <label htmlFor='contact'>Instagram User</label>
+                    <label style={{ fontSize: '25px' }} htmlFor='contact'>My Instagram user is</label>
                     <input type='text' id='contact' name='contact' placeholder='Your Instagram ID...' value={contact} onChange={handlerInputChange}></input>
 
                 </div>

@@ -1,15 +1,28 @@
 import React from 'react'
+import './About.css';
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
+import { useUserContext } from "../context/userContext";
 
-const About = () => {
+const About = (props) => {
+
+
+    const { user, logoutUser } = useUserContext();
     return (
 
-        <div style={{ color: 'white', marginTop: "150px" }}>
-            <h2>
-                {" "}
-                This is an app that help you find a person you like after the car plate.
-
-
-            </h2>
+        <div style={{ color: 'white', marginTop: "0px" }}>
+            <button onClick={logoutUser}>Log out</button>
+            <div >
+                <img className='between' src={require('./between.png')} />
+            </div>
+            <Link to='/home'>
+                <button className='Start now'>Start Now</button>
+            </Link>
+            <div >
+                <img className='' src={require('./item1.png')} />
+            </div>
+            <div >
+                <img className='' src={require('./item2.png')} />
+            </div>
 
 
         </div>

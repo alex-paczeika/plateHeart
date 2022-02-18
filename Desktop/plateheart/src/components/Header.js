@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useLocation, useHistory } from "react-router-dom"
 import './Header.css'
 
+
 const Header = () => {
 
     const [activeTab, setActiveTab] = useState("Home");
@@ -33,9 +34,8 @@ const Header = () => {
 
     return (
         <div className='header'>
-            <div className='logo'>
-                {/* <img src={require('./logo.png')} /> */}
-                <h2 style={{ fontSize: '35px', color: '#e3b543' }}>plateHeart</h2>
+            <div >
+                {/* <img className='logo' src={require('./logo.png')} /> */}
             </div>
 
             <div className='header-right'>
@@ -44,15 +44,16 @@ const Header = () => {
                     <input
                         type='text'
                         className='inputField'
-                        placeholder='Ex. Search TM01ZZZ'
+                        placeholder='🔍  TM01ZZZ'
                         onChange={(e) => setSearch(e.target.value.toLocaleUpperCase())}
                         value={search}
 
                     ></input>
+
                 </form>
 
 
-                <Link to='/'>
+                <Link to='/home'>
                     <p className={`${activeTab === "Home" ? "active" : ""}`}
                         onClick={() => setActiveTab("Home")}>
 
@@ -62,7 +63,6 @@ const Header = () => {
 
 
                 </Link>
-
 
 
                 <Link to='/add'>

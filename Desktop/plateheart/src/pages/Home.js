@@ -21,7 +21,10 @@ const Home = () => {
 
 
     return (
-        < div className='body' styles={{ marginTop: '100px' }}>
+        < div className='body' styles={{ marginTop: '0px' }}>
+            <div >
+                <img className='between' src={require('./between.png')} />
+            </div>
             <table className='styled-table'>
 
                 <tbody>
@@ -35,7 +38,7 @@ const Home = () => {
                                     {/* <td>{data[id].contact}</td> */}
                                     <td>
                                         <Link to={`/view/${id}`}>
-                                            <button className='btn btn-view'>View🔐</button>
+                                            <button className='btn btn-view'>View🔥</button>
                                         </Link>
                                     </td>
                                 </tr>

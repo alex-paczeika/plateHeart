@@ -1,7 +1,8 @@
 .header {
   overflow: hidden;
-  background-color: #2d3338;
+  background-color: #f85464;
 }
+
 .header p {
   float: left;
   color: white;
@@ -13,22 +14,24 @@
   border-radius: 4px;
 }
 .logo {
-  margin: 0;
-
-  text-align: center;
-  width: 100%;
+  width: 250px;
+  /* position: relative;
+  left: -700px; */
+  /* top: 2px; */
+  height: auto;
 }
+
 .header p.logo {
   font-size: 25px;
   font-weight: bold;
   color: #4284f5;
 }
 .inputField {
-  width: 45% !important;
-  background-color: #4e5961;
+  width: 35% !important;
+  background-color: #f0f2f4;
   padding: 1px;
   margin-top: 5px;
-  margin-right: 6px;
+  margin-right: 10px;
   border: none;
   font-size: 15px;
 }
@@ -37,12 +40,12 @@
   color: #5d6770;
 }
 .header p.active {
-  background-color: #e3b543;
+  background-color: black;
   color: white;
 }
 
 .header-right {
-  float: right;
+  float: center;
 }
 
 @media screen and (max-width: 500px) {
