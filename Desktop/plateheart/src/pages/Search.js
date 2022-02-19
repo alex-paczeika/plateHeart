@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useLocation, Link } from 'react-router-dom';
 import fireDb from '../firebase'
 import './Search.css'
+import './Home.css'
 
 const Search = () => {
 
@@ -42,14 +43,19 @@ const Search = () => {
                         <tbody>
                             {Object.keys(data).map((id, index) => {
                                 return (
-                                    <div className='codepen-wrapper'>
-                                        <tr className='registration-ui' key={id}>
-                                            {/* <th scope='row'>{index + 1}</th> */}
-                                            {/* <td>{data[id].name}</td> */}
-                                            <td>{data[id].plate}</td>
-                                            {/*  <td>{data[id].contact}</td> */}
+                                    <div className="head-text">
+                                        <div >
+                                            <Link to={`/view/${id}`}>
+                                                <button className='viewbutton' >
+                                                    <img className="head-image" src={require('./circle.gif')} alt="Freedom Blog" />
+                                                </button>
+                                            </Link>
+                                        </div>
+                                        <div class='text-on-image'>
 
-                                        </tr>
+                                            <h2> {data[id].plate}</h2>
+
+                                        </div>
                                     </div>
                                 )
                             })}

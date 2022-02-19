@@ -1,0 +1,15 @@
+.loginlogo {
+  width: 300px;
+  height: auto;
+}
+.buttonSignin {
+  background-color: #f85464;
+  border: none;
+  color: white;
+  padding: 12px;
+  margin: 12px 0;
+  box-shadow: 0 1px 6px #ccc;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 18px;
+}

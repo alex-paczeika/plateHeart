@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation, useHistory } from "react-router-dom"
 import './Header.css'
-
+import useSound from 'use-sound'
+import boopSfx from './buttonSound.mp3';
 
 const Header = () => {
 
     const [activeTab, setActiveTab] = useState("Home");
     const location = useLocation();
     const [search, setSearch] = useState('');
-
+    const [play] = useSound(boopSfx);
 
     const history = useHistory();
 
@@ -53,7 +54,7 @@ const Header = () => {
                 </form>
 
 
-                <Link to='/home'>
+                <Link onClick={play} to='/home'>
                     <p className={`${activeTab === "Home" ? "active" : ""}`}
                         onClick={() => setActiveTab("Home")}>
 
@@ -65,14 +66,14 @@ const Header = () => {
                 </Link>
 
 
-                <Link to='/add'>
+                <Link onClick={play} to='/add'>
                     <p className={`${activeTab === "AddContact" ? "active" : ""}`}
                         onClick={() => setActiveTab("AddContact")}>
                         AddMyPlate
                     </p>
 
                 </Link>
-                <Link to='/about'>
+                <Link onClick={play} to='/about'>
                     <p className={`${activeTab === "About" ? "active" : ""}`}
                         onClick={() => setActiveTab("About")}>
                         About

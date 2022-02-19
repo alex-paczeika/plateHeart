@@ -4,7 +4,8 @@ import './AddEdit.css'
 import fireDb from "../firebase";
 import { toast } from 'react-toastify';
 import { withRouter } from 'react-router-dom';
-
+import useSound from 'use-sound'
+import boopSfx from './buttonSound.mp3';
 
 
 const initialState = {
@@ -18,11 +19,10 @@ const initialState = {
 const AddEdit = () => {
     const [state, setState] = useState(initialState);
     const [data, setData] = useState({});
-
-
+    const [play] = useSound(boopSfx);
     const { name, plate, contact } = state;
 
-    const history = useHistory;
+
 
 
     useEffect(() => {
@@ -45,11 +45,11 @@ const AddEdit = () => {
                 if (err) {
                     toast.error(err);
                 } else {
-                    toast.success("Plate added Successfully");
+                    toast.success("Plate added Successfully, you can jump to Home");
 
                 }
             })
-            // setTimeout(() => history.push('/'), 500);
+
 
 
         }
@@ -59,7 +59,7 @@ const AddEdit = () => {
             <div >
                 <img className='between' src={require('./between.png')} />
             </div>
-            <form style={{ fontSize: '50px', margin: 'auto', padding: '15px', maxWidth: '300px ', alignContent: 'center' }}
+            <form onClick={play} style={{ fontSize: '50px', margin: 'auto', padding: '15px', maxWidth: '300px ', alignContent: 'center' }}
                 onSubmit={handleSubmit}>
                 <div className='namefield' >
                     <label style={{ fontSize: '25px' }} htmlFor='name'>My name is</label>

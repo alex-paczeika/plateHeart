@@ -1,10 +1,14 @@
 import React, { useRef } from "react";
 import { useUserContext } from "../context/userContext";
+import './signin.css';
+import useSound from 'use-sound'
+import boopSfx from './buttonSound.mp3';
 
 const Signin = () => {
   const emailRef = useRef();
   const psdRef = useRef();
   const { signInUser, forgotPassword } = useUserContext();
+  const [play] = useSound(boopSfx);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -22,15 +26,18 @@ const Signin = () => {
   };
 
   return (
-    <div className="form">
-      <h2> Login </h2>
-      <form onSubmit={onSubmit}>
-        <input placeholder="Email" type="email" ref={emailRef} />
-        <input placeholder="Password" type="password" ref={psdRef} />
-        <button type="submit">Sign In</button>
-        <p onClick={forgotPasswordHandler}>Forgot Password?</p>
-      </form>
-    </div>
+    <>
+      <img className='loginlogo' src={require('./logo.png')} />
+      <div className="form">
+        <h2> Login </h2>
+        <form onSubmit={onSubmit}>
+          <input placeholder="Email" type="email" ref={emailRef} />
+          <input placeholder="Password" type="password" ref={psdRef} />
+          <button onClick={play} className="buttonSignin" type="submit">Sign In</button>
+          <p onClick={forgotPasswordHandler}>Forgot Password?</p>
+        </form>
+      </div>
+    </>
   );
 };
 

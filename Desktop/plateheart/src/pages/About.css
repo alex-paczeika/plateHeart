@@ -1,0 +1,31 @@
+.logoAbout {
+  width: 350px;
+  height: auto;
+}
+.publicitylogo {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 420px;
+  height: auto;
+}
+.textpublicity {
+  width: 400px;
+  height: auto;
+}
+.Startnow {
+  background-color: #f85464;
+  border: none;
+  color: white;
+  padding: 12px;
+  margin: 12px 0;
+  box-shadow: 0 1px 6px #ccc;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 25%;
+  border-radius: 6px;
+  font-size: 18px;
+}
+.downarrowgif {
+  width: 250px;
+  height: auto;
+}

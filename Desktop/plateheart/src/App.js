@@ -14,7 +14,9 @@ import AuthBase from './AuthBase';
 
 function App() {
   return (
+
     <BrowserRouter>
+
       <div className='App'>
 
         <ToastContainer position='top-center'></ToastContainer>
