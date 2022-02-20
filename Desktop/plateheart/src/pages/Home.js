@@ -5,7 +5,7 @@ import './Home.css';
 import useSound from 'use-sound';
 import { toast } from 'react-toastify';
 import boopSfx from './buttonSound.mp3';
-
+import Fadein from 'react-fade-in'
 const Home = () => {
 
 
@@ -37,38 +37,40 @@ const Home = () => {
             <div >
                 <img className='between' src={require('./between.png')} />
             </div>
-            <table className='styled-table'>
+            <Fadein transitionDuration={5000}>
+                <table className='styled-table'>
 
 
 
-                {Object.keys(data).map((id, index) => {
-                    return (
-                        <div >
+                    {Object.keys(data).map((id, index) => {
+                        return (
+                            <div >
 
-                            <div className="head-text">
-                                <div >
-                                    <Link to={`/view/${id}`}>
-                                        <button onClick={play} className='viewbutton' >
-                                            <img className="head-image" src={require('./circle.gif')} alt="Freedom Blog" />
-                                        </button>
-                                    </Link>
+                                <div className="head-text">
+                                    <div >
+                                        <Link to={`/view/${id}`}>
+                                            <button onClick={play} className='viewbutton' >
+                                                <img className="head-image" src={require('./circle.gif')} alt="Freedom Blog" />
+                                            </button>
+                                        </Link>
+                                    </div>
+                                    <div class='text-on-image'>
+
+                                        <h2> {data[id].plate}</h2>
+
+                                    </div>
                                 </div>
-                                <div class='text-on-image'>
 
-                                    <h2> {data[id].plate}</h2>
+                                <td >
 
-                                </div>
+                                </td>
+
                             </div>
+                        )
+                    })}
 
-                            <td >
-
-                            </td>
-
-                        </div>
-                    )
-                })}
-
-            </table>
+                </table>
+            </Fadein>
         </div >
     )
 }

@@ -16,12 +16,20 @@ const initialState = {
 
 
 
+
 const AddEdit = () => {
+
+    const history = useHistory();
+
     const [state, setState] = useState(initialState);
     const [data, setData] = useState({});
     const [play] = useSound(boopSfx);
     const { name, plate, contact } = state;
 
+    const routeChange = () => {
+        let path = `./Home`;
+        history.push(path);
+    }
 
 
 
@@ -45,6 +53,7 @@ const AddEdit = () => {
                 if (err) {
                     toast.error(err);
                 } else {
+                    routeChange();
                     toast.success("Plate added Successfully, you can jump to Home");
 
                 }
@@ -63,7 +72,7 @@ const AddEdit = () => {
                 onSubmit={handleSubmit}>
                 <div className='namefield' >
                     <label style={{ fontSize: '25px' }} htmlFor='name'>My name is</label>
-                    <input type='text' id='name' name='name' placeholder='Your Name...' value={name} onChange={handlerInputChange}></input>
+                    <input type='text' id='name' name='name' placeholder='Ex. Ioana , Alex ' value={name} onChange={handlerInputChange}></input>
                     <label style={{ fontSize: '25px' }} htmlFor='plate'>My plate number</label>
                     <input type='plate' id='plate' name='plate' placeholder='For ex. TM01ZZZ' value={plate.toLocaleUpperCase()} onChange={handlerInputChange}></input>
                     <label style={{ fontSize: '25px' }} htmlFor='contact'>My Instagram user is</label>
