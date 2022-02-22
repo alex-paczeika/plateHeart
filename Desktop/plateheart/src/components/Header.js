@@ -3,6 +3,7 @@ import { Link, useLocation, useHistory } from "react-router-dom"
 import './Header.css'
 import useSound from 'use-sound'
 import boopSfx from './buttonSound.mp3';
+import { useUserContext } from "../context/userContext";
 
 const Header = () => {
 
@@ -10,7 +11,7 @@ const Header = () => {
     const location = useLocation();
     const [search, setSearch] = useState('');
     const [play] = useSound(boopSfx);
-
+    const { user, logoutUser } = useUserContext();
     const history = useHistory();
 
     useEffect(() => {
@@ -36,22 +37,12 @@ const Header = () => {
     return (
         <div className='header'>
             <div >
-                {/* <img className='logo' src={require('./logo.png')} /> */}
+                <img className='logo' src={require('./logotext.png')} />
             </div>
 
             <div className='header-right'>
 
-                <form onSubmit={handleSubmit} style={{ display: 'inline' }}>
-                    <input
-                        type='text'
-                        className='inputField'
-                        placeholder='🔍  TM01ZZZ'
-                        onChange={(e) => setSearch(e.target.value.toLocaleUpperCase())}
-                        value={search}
-
-                    ></input>
-
-                </form>
+                <button onClick={logoutUser}>Log out</button>
 
 
                 <Link onClick={play} to='/home'>
@@ -79,7 +70,20 @@ const Header = () => {
                         About
                     </p>
 
+
                 </Link>
+                <form onSubmit={handleSubmit} style={{ display: 'inline' }}>
+                    <input
+                        type='text'
+                        className='inputField'
+                        placeholder='🔍  TM01ZZZ'
+                        onChange={(e) => setSearch(e.target.value.toLocaleUpperCase())}
+                        value={search}
+
+                    ></input>
+
+                </form>
+
 
             </div>
         </div >

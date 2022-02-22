@@ -22,7 +22,7 @@
   padding: 4px 16px;
 }
 .resize {
-  width: 80px;
+  width: 400px;
   height: auto;
 }
 
@@ -36,4 +36,10 @@
   font-size: 18px;
   line-height: 15px;
   border-radius: 4px;
+}
+.result {
+  border-style: solid;
+  margin: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }

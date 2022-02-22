@@ -29,14 +29,16 @@ const Home = () => {
     }, []);
 
     useEffect(() => {
-        toast.success("Tap to know your crush");
+        toast.info("Tap the circle to know your crush");
     }, [])
 
     return (
         < div className='body' styles={{ marginTop: '0px' }}>
             <div >
                 <img className='between' src={require('./between.png')} />
+
             </div>
+
             <Fadein transitionDuration={5000}>
                 <table className='styled-table'>
 

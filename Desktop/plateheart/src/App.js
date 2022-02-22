@@ -11,8 +11,7 @@ import Header from './components/Header';
 import Search from './pages/Search';
 import Start from './pages/Start';
 import AuthBase from './AuthBase';
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
-import { useLocation } from 'react-router-dom';
+
 function App() {
 
 
@@ -29,6 +28,7 @@ function App() {
         <div>
 
           <Header></Header>
+
           <Switch>
             <Route exact path="/" component={AuthBase}></Route>
             <Route path="/home" component={Home}></Route>

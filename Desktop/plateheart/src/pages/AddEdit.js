@@ -34,7 +34,7 @@ const AddEdit = () => {
 
 
     useEffect(() => {
-        toast.warn("Please add only your car in order to have a match.");
+        toast.warn("Add only your car in order to be found by your crash.");
     }, [])
 
     const handlerInputChange = (e) => {
@@ -74,7 +74,7 @@ const AddEdit = () => {
                     <label style={{ fontSize: '25px' }} htmlFor='name'>My name is</label>
                     <input type='text' id='name' name='name' placeholder='Ex. Ioana , Alex ' value={name} onChange={handlerInputChange}></input>
                     <label style={{ fontSize: '25px' }} htmlFor='plate'>My plate number</label>
-                    <input type='plate' id='plate' name='plate' placeholder='For ex. TM01ZZZ' value={plate.toLocaleUpperCase()} onChange={handlerInputChange}></input>
+                    <input type='plate' id='plate' name='plate' placeholder='For ex. TM01ZZZ' onInput={(e) => e.target.value = ("" + e.target.value).toUpperCase()} value={plate.toUpperCase()} onChange={handlerInputChange}></input>
                     <label style={{ fontSize: '25px' }} htmlFor='contact'>My Instagram user is</label>
                     <input type='text' id='contact' name='contact' placeholder='Your Instagram ID...' value={contact} onChange={handlerInputChange}></input>
 

@@ -27,26 +27,26 @@ const View = () => {
                 <img className='between' src={require('./between.png')} />
             </div>
             <h2>
-                <img className='resize' src={require('./carplate.png')} />
-                <Fadein transitionDuration={5000}>
-                    <p style={{ color: 'black' }}>   {user.plate}</p>
-                </Fadein>
 
+                <Fadein transitionDuration={6700}>
+                    <p className='result' style={{ color: 'black' }}>Car Plate:  {user.plate}</p>
+                </Fadein>
+                <img className='resize' src={require('./progressbar.gif')} />
             </h2>
             <h2>
-                <img className='resize' src={require('./name.png')} />
-                <Fadein transitionDuration={20000} >
-                    <p className='test' style={{ color: 'black' }}>   {user.name}</p>
-                </Fadein>
 
+                <Fadein transitionDuration={6700} >
+                    <p className='result' style={{ color: 'black' }}>Name:  {user.name}</p>
+                </Fadein>
+                <img className='resize' src={require('./progressbar.gif')} />
             </h2>
 
             <h2>
-                <img className='resize' src={require('./instagram.png')} />
-                <Fadein transitionDuration={20000}>
-                    <p style={{ color: 'black' }}>  {user.contact}</p>
-                </Fadein>
 
+                <Fadein transitionDuration={6700}>
+                    <p className='result' style={{ color: 'black' }}> Instagram:  {user.contact}</p>
+                </Fadein>
+                <img className='resize' src={require('./progressbar.gif')} />
             </h2>
 
 

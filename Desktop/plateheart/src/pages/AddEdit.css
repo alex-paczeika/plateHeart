@@ -29,10 +29,14 @@ input[type="submit"]:hover {
 .namefield {
   font-weight: bold;
   text-align: left;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   color: rgb(33, 0, 0);
 }
 .save {
   background-color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   float: center;
   color: white;
   text-align: center;
