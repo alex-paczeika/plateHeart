@@ -42,7 +42,7 @@ const Header = () => {
 
             <div className='header-right'>
 
-                <button onClick={logoutUser}>Log out</button>
+
 
 
                 <Link onClick={play} to='/home'>
@@ -64,15 +64,15 @@ const Header = () => {
                     </p>
 
                 </Link>
-                <Link onClick={play} to='/about'>
+                <Link onClick={logoutUser} >
                     <p className={`${activeTab === "About" ? "active" : ""}`}
                         onClick={() => setActiveTab("About")}>
-                        About
+                        Sign out
                     </p>
 
-
+                    {/* <button onClick={logoutUser}>Sign out</button> */}
                 </Link>
-                <form onSubmit={handleSubmit} style={{ display: 'inline' }}>
+                {/* <form onSubmit={handleSubmit} style={{ display: 'inline' }}>
                     <input
                         type='text'
                         className='inputField'
@@ -82,7 +82,7 @@ const Header = () => {
 
                     ></input>
 
-                </form>
+                </form> */}
 
 
             </div>

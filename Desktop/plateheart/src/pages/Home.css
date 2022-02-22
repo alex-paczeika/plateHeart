@@ -78,12 +78,44 @@
 }
 
 .head-image {
-  margin-left: 20px;
-  width: 95%;
+  width: 120%;
   height: auto;
+  margin-left: -40px;
 }
 .viewbutton {
   background: transparent;
   border: none !important;
   /* font-size: 0; */
+}
+.search {
+  background-color: #f85464;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  margin: 12px 0;
+  box-shadow: 0 1px 6px #ccc;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  width: 25%;
+  border-radius: 6px;
+  font-size: 18px;
+}
+.inputField {
+  width: 85% !important;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #ffffff;
+  padding: 1px;
+  margin-top: 5px;
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.getting {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 23px;
 }

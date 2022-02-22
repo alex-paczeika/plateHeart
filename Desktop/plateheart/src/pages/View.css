@@ -37,8 +37,12 @@
   line-height: 15px;
   border-radius: 4px;
 }
+.instagram {
+  width: 70px;
+  height: auto;
+}
 .result {
-  border-style: solid;
+  /* border-style: solid; */
   margin: 20px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;

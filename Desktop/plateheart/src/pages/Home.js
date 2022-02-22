@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import fireDb from "../firebase";
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './Home.css';
 import useSound from 'use-sound';
 import { toast } from 'react-toastify';
@@ -15,6 +15,8 @@ const Home = () => {
 
 
     const [data, setData] = useState({});
+    const [search, setSearch] = useState('');
+    const history = useHistory();
     useEffect(() => {
         fireDb.child("plates").on("value", (snapshot) => {
             if (snapshot.val() !== null) {
@@ -29,8 +31,17 @@ const Home = () => {
         };
     }, []);
 
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        history.push(`/search?name=${search}`)
+        setSearch("");
+
+    }
+
+
     useEffect(() => {
-        toast.info("Tap the circle to know your crush");
+        // toast.info("Tap the circle to know your crush");
     }, [])
 
     return (
@@ -43,10 +54,10 @@ const Home = () => {
 
             <Fadein transitionDuration={5000}>
                 <table className='styled-table'>
+                    <img className="head-image" src={require('./circle.gif')} alt="Freedom Blog" />
+                    <h2 className='getting' >Getting Data</h2>
 
-
-
-                    {Object.keys(data).map((id, index) => {
+                    {/* {Object.keys(data).map((id, index) => {
                         return (
                             <div >
 
@@ -71,9 +82,21 @@ const Home = () => {
 
                             </div>
                         )
-                    })}
+                    })} */}
 
                 </table>
+                <form onSubmit={handleSubmit} style={{ display: 'inline', }}>
+                    <input
+                        type='text'
+                        className='inputField'
+                        placeholder='🔍  TM01ZZZ'
+                        onChange={(e) => setSearch(e.target.value.toLocaleUpperCase())}
+                        value={search}
+
+                    ></input>
+                    <p>{`\n`}</p>
+                    <button onClick={play} className='search'>Search</button>
+                </form>
             </Fadein>
         </div >
     )

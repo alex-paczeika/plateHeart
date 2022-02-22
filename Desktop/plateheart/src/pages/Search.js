@@ -3,6 +3,8 @@ import { useLocation, Link } from 'react-router-dom';
 import fireDb from '../firebase'
 import './Search.css'
 import './Home.css'
+import Header from '../components/Header';
+import Fadein from 'react-fade-in'
 const Search = () => {
 
 
@@ -34,27 +36,37 @@ const Search = () => {
         <>
 
             < div styles={{ marginTop: '100px' }}>
+                <Header></Header>
+                <div >
+                    <img className='between' src={require('./between.png')} />
+
+                </div>
                 {Object.keys(data).length === 0 ? (
-                    <h2>No Search Found with that name : {query.get("name")}</h2>
+                    <h2>No Search Found with that number {query.get("name")}. Be sure you write the plate number corectly.</h2>
                 ) : (
+
                     <table className='styled-table'>
 
                         <tbody>
                             {Object.keys(data).map((id, index) => {
                                 return (
                                     <div className="head-text">
+
                                         <div >
                                             <Link to={`/view/${id}`}>
                                                 <button className='viewbutton' >
-                                                    <img className="head-image" src={require('./circle.gif')} alt="Freedom Blog" />
+                                                    <Fadein transitionDuration={7000}>
+                                                        <div class='text-on-image'>
+
+                                                            <h2> {data[id].plate}</h2>
+
+                                                        </div>
+                                                    </Fadein>
+                                                    <img className="loadingsearch" src={require('./loadingsearch.gif')} alt="Freedom Blog" />
                                                 </button>
                                             </Link>
                                         </div>
-                                        <div class='text-on-image'>
 
-                                            <h2> {data[id].plate}</h2>
-
-                                        </div>
                                     </div>
                                 )
                             })}

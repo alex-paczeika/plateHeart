@@ -27,7 +27,7 @@ input[type="submit"]:hover {
 }
 
 .namefield {
-  font-weight: bold;
+  /* font-weight: bold;  */
   text-align: left;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;

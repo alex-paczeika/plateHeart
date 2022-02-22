@@ -14,13 +14,16 @@ const About = (props) => {
     return (
 
         <div style={{ color: 'white', marginTop: "0px" }}>
-            <Header></Header>
+            {/* <Header></Header> */}
             <div >
                 <img className='between' src={require('./between.png')} />
             </div>
             <Fadein transitionDuration={5000}>
                 <div >
                     <img className='logoAbout' src={require('./logo.png')} />
+                </div>
+                <div >
+                    <img className='publicitylogo' src={require('./publicityfinal.png')} />
                 </div>
                 <div >
                     <img className='downarrowgif' src={require('./loader.gif')} />
@@ -33,7 +36,7 @@ const About = (props) => {
                 </div>
 
                 <div >
-                    <img className='publicitylogo' src={require('./publicityfinal.png')} />
+                    <img className='publicitylogo' src={require('./marketingphoto.png')} />
                 </div>
                 <Link to='/add'>
                     <button onClick={play} className='Startnow'>Start Now</button>

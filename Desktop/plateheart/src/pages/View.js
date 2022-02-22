@@ -28,25 +28,20 @@ const View = () => {
             <div >
                 <img className='between' src={require('./between.png')} />
             </div>
-            <h2>
 
-                <Fadein transitionDuration={6700}>
-                    <p className='result' style={{ color: 'black' }}>Car Plate:  {user.plate}</p>
-                </Fadein>
-                <img className='resize' src={require('./progressbar.gif')} />
-            </h2>
             <h2>
 
                 <Fadein transitionDuration={6700} >
-                    <p className='result' style={{ color: 'black' }}>Name:  {user.name}</p>
+
                 </Fadein>
-                <img className='resize' src={require('./progressbar.gif')} />
+                <img className='instagram' src={require('./instagram.png')} />
             </h2>
 
             <h2>
 
                 <Fadein transitionDuration={6700}>
-                    <p className='result' style={{ color: 'black' }}> Instagram:  {user.contact}</p>
+                    <p className='result' style={{ color: 'black' }}>{user.name}</p>
+                    <p className='result' style={{ color: 'black' }}> {user.contact}</p>
                 </Fadein>
                 <img className='resize' src={require('./progressbar.gif')} />
             </h2>

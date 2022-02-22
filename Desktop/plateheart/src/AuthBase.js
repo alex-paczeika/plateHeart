@@ -14,7 +14,7 @@ const AuthBase = () => {
     return (
         <div className="logi">
             {error && <p className="error">{error}</p>}
-            {loading ? <h2>Loading...</h2> : <> {user ? <Home></Home> : <Auth />} </>}
+            {loading ? <h2>Loading...</h2> : <> {user ? <About></About> : <Auth />} </>}
         </div >
     )
 }
