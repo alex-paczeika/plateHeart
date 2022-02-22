@@ -6,6 +6,7 @@ import useSound from 'use-sound';
 import { toast } from 'react-toastify';
 import boopSfx from './buttonSound.mp3';
 import Fadein from 'react-fade-in'
+import Header from '../components/Header';
 const Home = () => {
 
 
@@ -34,6 +35,7 @@ const Home = () => {
 
     return (
         < div className='body' styles={{ marginTop: '0px' }}>
+            <Header></Header>
             <div >
                 <img className='between' src={require('./between.png')} />
 

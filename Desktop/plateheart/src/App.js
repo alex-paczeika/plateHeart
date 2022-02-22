@@ -11,7 +11,9 @@ import Header from './components/Header';
 import Search from './pages/Search';
 import Start from './pages/Start';
 import AuthBase from './AuthBase';
-
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { useLocation } from 'react-router-dom';
+import UserRoute from './Routers/UserRoute';
 function App() {
 
 
@@ -27,17 +29,16 @@ function App() {
 
         <div>
 
-          <Header></Header>
 
           <Switch>
             <Route exact path="/" component={AuthBase}></Route>
-            <Route path="/home" component={Home}></Route>
-            <Route path="/add" component={AddEdit}></Route>
-            <Route path="/update/:id" component={AddEdit}></Route>
-            <Route path="/view/:id" component={View}></Route>
-            <Route path="/about" component={About}></Route>
-            <Route path="/search" component={Search}></Route>
-            <Route exact path="/start" component={Start}></Route>
+            <UserRoute exact path="/home" component={Home}></UserRoute>
+            <UserRoute path="/add" component={AddEdit}></UserRoute>
+            <UserRoute path="/update/:id" component={AddEdit}></UserRoute>
+            <UserRoute path="/view/:id" component={View}></UserRoute>
+            <UserRoute path="/about" component={About}></UserRoute>
+            <UserRoute path="/search" component={Search}></UserRoute>
+            <UserRoute exact path="/start" component={Start}></UserRoute>
 
           </Switch>
         </div>

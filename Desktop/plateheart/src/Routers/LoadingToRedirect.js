@@ -3,7 +3,7 @@ import { } from 'react-router-dom';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 const LoadingToRedirect = () => {
-    const [count, setCount] = useState(5);
+    const [count, setCount] = useState(3);
     const history = useHistory();
 
 

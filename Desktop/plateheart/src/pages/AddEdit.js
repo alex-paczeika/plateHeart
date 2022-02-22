@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import { withRouter } from 'react-router-dom';
 import useSound from 'use-sound'
 import boopSfx from './buttonSound.mp3';
-
+import Header from '../components/Header';
 
 const initialState = {
     name: '',
@@ -65,6 +65,7 @@ const AddEdit = () => {
     };
     return (
         <div style={{ marginTop: '0px' }}>
+            <Header></Header>
             <div >
                 <img className='between' src={require('./between.png')} />
             </div>

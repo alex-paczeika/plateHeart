@@ -3,7 +3,6 @@ import { useLocation, Link } from 'react-router-dom';
 import fireDb from '../firebase'
 import './Search.css'
 import './Home.css'
-
 const Search = () => {
 
 

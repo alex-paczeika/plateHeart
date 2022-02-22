@@ -3,6 +3,7 @@ import Auth from "./components/auth";
 import Dashboard from "./components/dashboard";
 import { useUserContext } from "./context/userContext";
 import About from './pages/About';
+import Home from './pages/Home';
 
 
 
@@ -13,7 +14,7 @@ const AuthBase = () => {
     return (
         <div className="logi">
             {error && <p className="error">{error}</p>}
-            {loading ? <h2>Loading...</h2> : <> {user ? <About></About> : <Auth />} </>}
+            {loading ? <h2>Loading...</h2> : <> {user ? <Home></Home> : <Auth />} </>}
         </div >
     )
 }

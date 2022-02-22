@@ -1,8 +1,8 @@
 import React from 'react'
 import { Route } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import LoadingToRedirect from './LoadingToRedirect';
-
+import { useUserContext } from "../context/userContext";
 
 const UserRoute = ({ children, ...rest }) => {
 

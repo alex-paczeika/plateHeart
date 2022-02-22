@@ -3,6 +3,7 @@ import fireDb from '../firebase'
 import { useParams, Link } from 'react-router-dom/cjs/react-router-dom.min'
 import "./View.css";
 import Fadein from 'react-fade-in'
+import Header from '../components/Header';
 
 const View = () => {
     const [user, setUser] = useState({});
@@ -23,6 +24,7 @@ const View = () => {
     return (
 
         <div style={{ marginBottom: "100px" }}>
+            <Header></Header>
             <div >
                 <img className='between' src={require('./between.png')} />
             </div>
