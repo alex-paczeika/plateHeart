@@ -12,6 +12,7 @@
 }
 .body {
   background-color: #f0f2f4;
+  height: 100vh;
 }
 .test .styled-table thead tr {
   background-color: #e3b543;
@@ -36,7 +37,10 @@
   margin: 4px 2px;
   cursor: pointer;
 }
-
+.body {
+  background-image: url("carparking.jpg");
+  background-size: cover;
+}
 .keyf {
   font-weight: bold;
   font-size: 20px;
@@ -61,7 +65,7 @@
 }
 
 .head-image {
-  width: 120%;
+  width: 100%;
   height: auto;
   margin-left: -40px;
 }
@@ -71,7 +75,7 @@
   /* font-size: 0; */
 }
 .search:hover {
-  background-color: rgb(49, 48, 48);
+  background-color: #747370;
 }
 .search {
   background-color: transparent;
@@ -82,22 +86,24 @@
   text-align: center;
   padding: 10px;
   text-decoration: none;
-  font-size: 25px;
+  font-weight: bold;
+  font-size: 20px;
   line-height: 25px;
   border-radius: 30px;
-  margin-top: 50px;
-  border-color: black;
+  margin-top: -5px;
+  border-color: rgb(141, 10, 10);
 }
 .inputField {
   width: 85% !important;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   background-color: #ffffff;
+  /* text-align: center; */
   padding: 1px;
-  margin-top: 5px;
+  margin-top: 20px;
   margin-right: 10px;
   font-size: 20px;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 .getting {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",

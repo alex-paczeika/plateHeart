@@ -1,12 +1,7 @@
 .footer {
   margin-top: 1rem;
   padding: 1rem;
-  background: radial-gradient(
-    ellipse at left bottom,
-    #f85464,
-    #f85464,
-    rgb(186, 29, 29) 100%
-  );
+  background-color: whitesmoke;
   position: fixed;
   bottom: 0;
   left: 0;

@@ -5,6 +5,7 @@ import './Search.css'
 import './Home.css'
 import Header from '../components/Header';
 import Fadein from 'react-fade-in'
+import Footer from '../components/Footer';
 const Search = () => {
 
 
@@ -38,10 +39,7 @@ const Search = () => {
 
             < div styles={{ marginTop: '100px' }}>
                 <Header></Header>
-                <div >
-                    <img className='between' src={require('./between.png')} />
-
-                </div>
+                <Footer></Footer>
                 {Object.keys(data).length === 0 ? (
                     <h2>No Search Found with that number {query.get("name")}. Be sure you write the plate number corectly.</h2>
                 ) : (
@@ -63,7 +61,7 @@ const Search = () => {
 
                                                         </div>
                                                     </Fadein>
-                                                    <img className="loadingsearch" src={require('./loadingsearch.gif')} alt="Freedom Blog" />
+
                                                 </button>
                                             </Link>
                                         </div>

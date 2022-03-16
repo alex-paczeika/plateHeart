@@ -96,9 +96,7 @@ const AddEdit = () => {
     return (
         <div style={{ marginTop: '0px' }}>
             {/* <Header></Header> */}
-            <div >
-                <img className='between' src={require('./between.png')} />
-            </div>
+
             <form onClick={play} style={{ fontSize: '50px', margin: 'auto', padding: '15px', maxWidth: '300px ', alignContent: 'center' }}
                 onSubmit={handleSubmit}>
                 <div className='namefield' >

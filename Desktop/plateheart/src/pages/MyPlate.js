@@ -55,19 +55,20 @@ const MyPlate = () => {
         <div>
             <Header></Header>
             <Footer></Footer>
-
+            <img className="caricon" src={require('./caricon.png')} />
             <Fadein transitionDuration={5000}>
                 {Object.keys(data).map((id, index) => {
                     return (<>
                         <div>
-                            <label style={{ fontSize: '25px' }} htmlFor='name'>Name:</label>
-                            <h1 className='result'>{data[id].name}</h1>
-                            <label style={{ fontSize: '25px' }} htmlFor='name'>Email:</label>
-                            <h1 className='result'>{data[id].email}</h1>
-                            <label style={{ fontSize: '25px' }} htmlFor='name'>Plate:</label>
                             <h1 className='result'>{data[id].plate}</h1>
-                            <label style={{ fontSize: '25px' }} htmlFor='name'>Instagram:</label>
-                            <h1 className='result'>{data[id].contact}</h1>
+                            {/* <label style={{ fontSize: '20px' }} htmlFor='name'>Name:</label> */}
+                            <h2 className='top' >{data[id].name}</h2>
+
+                            <h2 className='top'>{data[id].email}</h2>
+
+
+
+                            <h2 className='top'>{data[id].contact}</h2>
                         </div>
                         {/* <button className='button' onClick={() => { onDelete(id); logoutUser() }}></button> */}
                         <button className='delete' onClick={redirectToDelete}>Delete</button>
@@ -81,7 +82,8 @@ const MyPlate = () => {
 
 
 
-        </div>
+
+        </div >
     )
 }
 

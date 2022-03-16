@@ -25,7 +25,7 @@ const Footer = () => {
                     <img className='logofooter' src={require('./home.png')} />
                 </Link>
                 <Link style={{ textDecoration: 'none' }} to='/myPlate'>
-                    <img className='logofooter' src={require('./myprofile.jpeg')} />
+                    <img className='logofooter' src={require('./myprofile.png')} />
                 </Link>
 
             </div>

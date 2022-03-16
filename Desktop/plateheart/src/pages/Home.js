@@ -58,23 +58,25 @@ const Home = () => {
 
             <Fadein transitionDuration={5000}>
                 <table className='styled-table'>
-                    {/* <img className="head-image" src={require('./circle.gif')} alt="Freedom Blog" /> */}
+                    {/* <img className="head-image" src={require('./circle.gif')} /> */}
 
 
 
 
                 </table>
-                <form onSubmit={handleSubmit} style={{ display: 'inline', }}>
+
+                <form className='form' onSubmit={handleSubmit} style={{ display: 'inline', }}>
                     <input
                         type='text'
                         className='inputField'
-                        placeholder='🔍  TM01ZZZ'
+                        placeholder='🔍          type the plate'
                         onChange={(e) => setSearch(e.target.value.toLocaleUpperCase())}
                         value={search}
 
                     ></input>
+
                     <p>{`\n`}</p>
-                    <button onClick={play} className='search'>Search</button>
+                    <button onClick={play} className='search'>Find the crush</button>
                 </form>
             </Fadein>
         </div >

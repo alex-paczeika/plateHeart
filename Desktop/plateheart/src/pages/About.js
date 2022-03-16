@@ -15,9 +15,7 @@ const About = (props) => {
 
         <div style={{ color: 'white', marginTop: "0px" }}>
             {/* <Header></Header> */}
-            <div >
-                <img className='between' src={require('./between.png')} />
-            </div>
+
             <Fadein transitionDuration={5000}>
                 <div >
                     <img className='logoAbout' src={require('./logo.png')} />

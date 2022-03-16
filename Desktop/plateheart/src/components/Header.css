@@ -18,11 +18,12 @@
   border-radius: 4px;
 }
 .logo {
-  width: 250px;
+  width: 160px;
   /* position: relative;
   left: -700px; */
   /* top: 2px; */
   height: auto;
+  margin-bottom: 100px;
 }
 
 .header p.logo {
