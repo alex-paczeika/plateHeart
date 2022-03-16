@@ -70,21 +70,23 @@
   border: none !important;
   /* font-size: 0; */
 }
+.search:hover {
+  background-color: rgb(49, 48, 48);
+}
 .search {
-  background-color: #f85464;
+  background-color: transparent;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  border: none;
-  color: white;
-  font-weight: bold;
-  padding: 12px;
-  margin: 12px 0;
-  box-shadow: 0 1px 6px #ccc;
-  margin-top: 40px;
-  margin-bottom: 80px;
-  width: 25%;
-  border-radius: 6px;
-  font-size: 18px;
+  float: center;
+  color: black;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 25px;
+  line-height: 25px;
+  border-radius: 30px;
+  margin-top: 50px;
+  border-color: black;
 }
 .inputField {
   width: 85% !important;

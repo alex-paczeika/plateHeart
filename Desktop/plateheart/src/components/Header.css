@@ -1,6 +1,7 @@
 .header {
   overflow: hidden;
-  background-color: #f85464;
+  /* background-color: #f85464; */
+  margin-bottom: 50px;
 }
 
 .header p {
@@ -45,7 +46,7 @@
   color: #5d6770;
 }
 .header p.active {
-  background-color: rgb(233, 199, 199);
+  background-color: rgb(2, 2, 2);
   color: white;
   margin: 15px 100px;
 }

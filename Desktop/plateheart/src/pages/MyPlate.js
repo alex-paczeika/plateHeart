@@ -4,7 +4,9 @@ import Header from '../components/Header'
 import { useUserContext } from "../context/userContext";
 import fireDb from '../firebase'
 import { toast } from 'react-toastify';
+import Fadein from 'react-fade-in'
 import './MyPlate.css';
+import Footer from '../components/Footer';
 const MyPlate = () => {
     const { user, logoutUser } = useUserContext();
     const [data, setData] = useState({});
@@ -52,26 +54,28 @@ const MyPlate = () => {
 
         <div>
             <Header></Header>
-            <div >
-                <img className='between' src={require('./between.png')} />
-            </div>
-            {Object.keys(data).map((id, index) => {
-                return (<>
-                    <div>
-                        <label style={{ fontSize: '25px' }} htmlFor='name'>Name:</label>
-                        <h1 className='result'>{data[id].name}</h1>
-                        <label style={{ fontSize: '25px' }} htmlFor='name'>Email:</label>
-                        <h1 className='result'>{data[id].email}</h1>
-                        <label style={{ fontSize: '25px' }} htmlFor='name'>Plate:</label>
-                        <h1 className='result'>{data[id].plate}</h1>
-                        <label style={{ fontSize: '25px' }} htmlFor='name'>Instagram:</label>
-                        <h1 className='result'>{data[id].contact}</h1>
-                    </div>
-                    {/* <button className='button' onClick={() => { onDelete(id); logoutUser() }}></button> */}
-                    <button className='delete' onClick={redirectToDelete}>Delete</button>
-                </>
-                )
-            })}
+            <Footer></Footer>
+
+            <Fadein transitionDuration={5000}>
+                {Object.keys(data).map((id, index) => {
+                    return (<>
+                        <div>
+                            <label style={{ fontSize: '25px' }} htmlFor='name'>Name:</label>
+                            <h1 className='result'>{data[id].name}</h1>
+                            <label style={{ fontSize: '25px' }} htmlFor='name'>Email:</label>
+                            <h1 className='result'>{data[id].email}</h1>
+                            <label style={{ fontSize: '25px' }} htmlFor='name'>Plate:</label>
+                            <h1 className='result'>{data[id].plate}</h1>
+                            <label style={{ fontSize: '25px' }} htmlFor='name'>Instagram:</label>
+                            <h1 className='result'>{data[id].contact}</h1>
+                        </div>
+                        {/* <button className='button' onClick={() => { onDelete(id); logoutUser() }}></button> */}
+                        <button className='delete' onClick={redirectToDelete}>Delete</button>
+                        <button className='delete' onClick={logoutUser}>Logout</button>
+                    </>
+                    )
+                })}
+            </Fadein>
 
 
 

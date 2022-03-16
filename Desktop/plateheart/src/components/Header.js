@@ -40,64 +40,24 @@ const Header = () => {
                 <img className='logo' src={require('./logotext.png')} />
             </div>
 
-            <div className='header-right'>
-
-
-
+            {/* <div className='header-right'>
 
                 <Link style={{ textDecoration: 'none' }} onClick={play} to='/home'>
                     <p className={`${activeTab === "Home" ? "active" : ""}`}
                         onClick={() => setActiveTab("Home")}>
-
                         Home
-
                     </p>
-
-
                 </Link>
-
                 <Link style={{ textDecoration: 'none' }} onClick={play} to='/myPlate'>
                     <p className={`${activeTab === "MyPlate" ? "active" : ""}`}
                         onClick={() => setActiveTab("MyPlate")}>
-
-                        MyPlate
-
+                        My Plate
                     </p>
-
-
                 </Link>
 
 
 
-                <Link style={{ textDecoration: 'none' }} onClick={play} to='/add'>
-                    <p className={`${activeTab === "AddContact" ? "active" : ""}`}
-                        onClick={() => setActiveTab("AddContact")}>
-                        AddMyPlate
-                    </p>
-
-                </Link>
-                <Link style={{ textDecoration: 'none' }} onClick={logoutUser} >
-                    <p className={`${activeTab === "About" ? "active" : ""}`}
-                        onClick={() => setActiveTab("About")}>
-                        Sign out
-                    </p>
-
-                    {/* <button onClick={logoutUser}>Sign out</button> */}
-                </Link>
-                {/* <form onSubmit={handleSubmit} style={{ display: 'inline' }}>
-                    <input
-                        type='text'
-                        className='inputField'
-                        placeholder='🔍  TM01ZZZ'
-                        onChange={(e) => setSearch(e.target.value.toLocaleUpperCase())}
-                        value={search}
-
-                    ></input>
-
-                </form> */}
-
-
-            </div>
+            </div> */}
         </div >
     )
 }

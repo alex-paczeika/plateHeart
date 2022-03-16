@@ -23,7 +23,7 @@ input[type=" submit"] {
   cursor: pointer;
 }
 input[type="submit"]:hover {
-  background-color: #505050;
+  background-color: rgb(49, 48, 48);
 }
 
 .namefield {
@@ -38,7 +38,7 @@ input[type="submit"]:hover {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   float: center;
-  color: #f85464;
+  color: black;
   text-align: center;
   padding: 10px;
   text-decoration: none;
@@ -46,7 +46,7 @@ input[type="submit"]:hover {
   line-height: 25px;
   border-radius: 30px;
   margin-top: 50px;
-  border-color: #060505;
+  border-color: black;
 }
 .between {
   width: 100%;

@@ -45,7 +45,7 @@ const AddEdit = () => {
 
 
     useEffect(() => {
-        toast.info("Add your car in order to be found by your crash.");
+
 
         fireDb.child("plates").orderByChild("email").equalTo(user.email).on("value", (snapshot) => {
             const data = snapshot.val();

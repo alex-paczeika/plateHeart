@@ -6,6 +6,7 @@ import useSound from 'use-sound';
 import boopSfx from './buttonSound.mp3';
 import Fadein from 'react-fade-in'
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 const Home = () => {
 
 
@@ -15,6 +16,7 @@ const Home = () => {
 
     const [data, setData] = useState({});
     const [search, setSearch] = useState('');
+
     const history = useHistory();
     useEffect(() => {
         fireDb.child("plates").on("value", (snapshot) => {
@@ -48,15 +50,16 @@ const Home = () => {
     return (
         < div className='body' styles={{ marginTop: '0px' }}>
             <Header></Header>
-            <div >
+            <Footer></Footer>
+            {/* <div >
                 <img className='between' src={require('./between.png')} />
 
-            </div>
+            </div> */}
 
             <Fadein transitionDuration={5000}>
                 <table className='styled-table'>
                     {/* <img className="head-image" src={require('./circle.gif')} alt="Freedom Blog" /> */}
-                    <h2 className='getting' >Getting Data</h2>
+
 
 
 

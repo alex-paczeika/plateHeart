@@ -1,0 +1,20 @@
+.footer {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: radial-gradient(
+    ellipse at left bottom,
+    #f85464,
+    #f85464,
+    rgb(186, 29, 29) 100%
+  );
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 5%;
+  width: 100%;
+}
+.logofooter {
+  width: 50px;
+  margin: 0px 70px;
+  height: auto;
+}
