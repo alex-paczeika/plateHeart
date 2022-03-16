@@ -31,7 +31,7 @@ const AddEdit = () => {
 
     const [play] = useSound(boopSfx);
     const { email, name, plate, contact, popularity } = state;
-    console.log(user.email);
+
 
 
 
@@ -42,9 +42,28 @@ const AddEdit = () => {
 
 
 
+
+
     useEffect(() => {
         toast.info("Add your car in order to be found by your crash.");
-    }, [])
+
+        fireDb.child("plates").orderByChild("email").equalTo(user.email).on("value", (snapshot) => {
+            const data = snapshot.val();
+            setData(data);
+
+        })
+        if (data === null) {
+            console.log("test");
+        } else {
+            Object.keys(data).map((id, index) => {
+                if (data[id].plate === 'null') {
+                    console.log("e null");
+                } else {
+                    routeChange();
+                }
+            })
+        }
+    }, [data])
 
     const handlerInputChange = (e) => {
         const { name, value } = e.target;
@@ -64,7 +83,7 @@ const AddEdit = () => {
                     toast.error(err);
                 } else {
                     routeChange();
-                    toast.success("Plate added Successfully, you can jump to Home");
+
 
                 }
             })

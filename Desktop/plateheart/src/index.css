@@ -42,7 +42,7 @@ input {
 
 .container > p {
   cursor: pointer;
-  margin: 12px;
+  margin: 100px;
 }
 
 .form {

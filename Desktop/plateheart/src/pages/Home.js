@@ -55,7 +55,7 @@ const Home = () => {
 
             <Fadein transitionDuration={5000}>
                 <table className='styled-table'>
-                    <img className="head-image" src={require('./circle.gif')} alt="Freedom Blog" />
+                    {/* <img className="head-image" src={require('./circle.gif')} alt="Freedom Blog" /> */}
                     <h2 className='getting' >Getting Data</h2>
 
 
