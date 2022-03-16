@@ -3,39 +3,24 @@
   /* font-size: 0.9em; */
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  /* max-width: 800px; */
 }
 .texttap {
   font-size: 15px;
   background-color: #f85464;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  /* border-style: outset; */
 }
 .body {
   background-color: #f0f2f4;
-  /* height: 100vh; */
 }
 .test .styled-table thead tr {
   background-color: #e3b543;
   color: #ffffff;
   text-align: left;
 }
-.styled-table th,
-.styled-table td {
-  padding: 5px 5px;
-  background-color: #f4eeee;
-}
-.styled-table tbody tr {
-  border-bottom: 1px solid #dddddd;
-}
 
 .styled-tabletbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
-}
-
-.styled-tabletbody tr:last-of-type {
-  border-bottom: 2px solid #e3b543;
 }
 
 .btn {
@@ -63,9 +48,7 @@
   /* top: 2px; */
   height: auto;
 }
-.head-text {
-  position: relative;
-}
+
 .text-on-image {
   font-size: 140%;
   position: relative;

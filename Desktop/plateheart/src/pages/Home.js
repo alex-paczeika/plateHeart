@@ -3,7 +3,6 @@ import fireDb from "../firebase";
 import { Link, useHistory } from 'react-router-dom';
 import './Home.css';
 import useSound from 'use-sound';
-import { toast } from 'react-toastify';
 import boopSfx from './buttonSound.mp3';
 import Fadein from 'react-fade-in'
 import Header from '../components/Header';
@@ -44,6 +43,8 @@ const Home = () => {
         // toast.info("Tap the circle to know your crush");
     }, [])
 
+
+
     return (
         < div className='body' styles={{ marginTop: '0px' }}>
             <Header></Header>
@@ -57,32 +58,7 @@ const Home = () => {
                     <img className="head-image" src={require('./circle.gif')} alt="Freedom Blog" />
                     <h2 className='getting' >Getting Data</h2>
 
-                    {/* {Object.keys(data).map((id, index) => {
-                        return (
-                            <div >
 
-                                <div className="head-text">
-                                    <div >
-                                        <Link to={`/view/${id}`}>
-                                            <button onClick={play} className='viewbutton' >
-                                                <img className="head-image" src={require('./circle.gif')} alt="Freedom Blog" />
-                                            </button>
-                                        </Link>
-                                    </div>
-                                    <div class='text-on-image'>
-
-                                        <h2> {data[id].plate}</h2>
-
-                                    </div>
-                                </div>
-
-                                <td >
-
-                                </td>
-
-                            </div>
-                        )
-                    })} */}
 
                 </table>
                 <form onSubmit={handleSubmit} style={{ display: 'inline', }}>

@@ -8,23 +8,32 @@ import useSound from 'use-sound'
 import boopSfx from './buttonSound.mp3';
 import Header from '../components/Header';
 import Fadein from 'react-fade-in'
+import { useUserContext } from "../context/userContext";
 const initialState = {
+    email: '',
     name: '',
     plate: '',
     contact: '',
+    popularity: 0,
 }
 
 
 
 
+
 const AddEdit = () => {
-
+    const { user, logoutUser } = useUserContext();
     const history = useHistory();
-
+    initialState.email = `${user.email}`
     const [state, setState] = useState(initialState);
     const [data, setData] = useState({});
+
+
     const [play] = useSound(boopSfx);
-    const { name, plate, contact } = state;
+    const { email, name, plate, contact, popularity } = state;
+    console.log(user.email);
+
+
 
     const routeChange = () => {
         let path = `./Home`;
@@ -49,7 +58,8 @@ const AddEdit = () => {
         if (!name || !plate || !contact) {
             toast.error('Please provide value in each input field')
         } else {
-            fireDb.child("plates").push(state, (err) => {
+            fireDb.child(`plates`).push(state, (err) => {
+
                 if (err) {
                     toast.error(err);
                 } else {
@@ -61,11 +71,12 @@ const AddEdit = () => {
 
 
 
+
         }
     };
     return (
         <div style={{ marginTop: '0px' }}>
-            <Header></Header>
+            {/* <Header></Header> */}
             <div >
                 <img className='between' src={require('./between.png')} />
             </div>

@@ -16,7 +16,7 @@ const Search = () => {
 
     let query = useQuery();
     let search = query.get("name");
-    console.log("search", search);
+    // console.log("search", search);
 
     useEffect(() => {
         searchData();
@@ -25,6 +25,7 @@ const Search = () => {
 
     const searchData = () => {
         fireDb.child("plates").orderByChild("plate").equalTo(search).on("value", (snapshot) => {
+            console.log("yoo", snapshot.val());
             if (snapshot.val()) {
                 const data = snapshot.val();
                 setData(data);

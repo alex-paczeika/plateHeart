@@ -1,7 +1,15 @@
 .App {
   text-align: center;
-  height: 100h;
+  height: 110vh;
   background-color: #f0f2f4;
+}
+html,
+body {
+  height: 100%;
+}
+
+.full-height {
+  height: 100%;
 }
 .fade-enter {
   opacity: 0;

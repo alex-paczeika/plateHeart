@@ -6,7 +6,7 @@
 .header p {
   float: left;
   color: white;
-  margin: 30px;
+  margin: 10px 100px;
   text-align: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -41,12 +41,13 @@
   font-size: 15px;
 }
 .header p:hover {
-  background-color: #ddd;
+  /* background-color: #ddd; */
   color: #5d6770;
 }
 .header p.active {
-  background-color: black;
+  background-color: rgb(233, 199, 199);
   color: white;
+  margin: 15px 100px;
 }
 
 .header-right {

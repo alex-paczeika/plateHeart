@@ -7,10 +7,33 @@ import Header from '../components/Header';
 
 const View = () => {
     const [user, setUser] = useState({});
-
+    const [counter, setCounter] = useState(0);
     const { id } = useParams();
 
+
+    function incrementMethod() {
+        fireDb.child(`plates/${id}/popularity`).get().then((snapshot) => {
+
+            setCounter(snapshot.val() + 1);
+
+            console.log(snapshot.val());
+
+            fireDb.child(`plates/${id}`).update({ popularity: counter });
+        })
+
+
+
+
+
+
+    }
+
+
     useEffect(() => {
+
+
+
+
         fireDb.child(`plates/${id}`).get().then((snapshot) => {
             if (snapshot.exists()) {
                 setUser({ ...snapshot.val() })
@@ -40,12 +63,12 @@ const View = () => {
             <h2>
 
                 <Fadein transitionDuration={6700}>
-                    <p className='result' style={{ color: 'black' }}>{user.name}</p>
-                    <p className='result' style={{ color: 'black' }}> {user.contact}</p>
+                    <p className='' style={{ color: 'white' }}>{counter}</p>
+                    <p className='result' style={{ color: 'white' }}> {user.contact}</p>
                 </Fadein>
                 <img className='resize' src={require('./progressbar.gif')} />
             </h2>
-
+            <button onClick={incrementMethod}  >Increment</button>
 
             <Link to='/home'>
                 <button className='goback'>Go Back</button>

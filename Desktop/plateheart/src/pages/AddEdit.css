@@ -23,7 +23,7 @@ input[type=" submit"] {
   cursor: pointer;
 }
 input[type="submit"]:hover {
-  background-color: #5d6770;
+  background-color: #505050;
 }
 
 .namefield {
@@ -34,15 +34,24 @@ input[type="submit"]:hover {
   color: rgb(33, 0, 0);
 }
 .save {
-  background-color: black;
+  background-color: transparent;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   float: center;
-  color: white;
+  color: #f85464;
   text-align: center;
   padding: 10px;
   text-decoration: none;
-  font-size: 23px;
-  line-height: 15px;
-  border-radius: 4px;
+  font-size: 25px;
+  line-height: 25px;
+  border-radius: 30px;
+  margin-top: 50px;
+  border-color: #060505;
+}
+.between {
+  width: 100%;
+  /* position: relative;
+  left: -700px; */
+  /* top: 2px; */
+  height: auto;
 }

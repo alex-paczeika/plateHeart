@@ -3,7 +3,7 @@ import { useUserContext } from "../context/userContext";
 import './signin.css';
 import useSound from 'use-sound'
 import boopSfx from './buttonSound.mp3';
-
+import { toast } from "react-toastify";
 const Signin = () => {
   const emailRef = useRef();
   const psdRef = useRef();
@@ -19,6 +19,7 @@ const Signin = () => {
   };
 
   const forgotPasswordHandler = () => {
+    toast.warn("Please enter the email in input field and after click Forgot Password")
     const email = emailRef.current.value;
     if (email)
       forgotPassword(email).then(() => {

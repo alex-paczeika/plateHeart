@@ -45,7 +45,7 @@ const Header = () => {
 
 
 
-                <Link onClick={play} to='/home'>
+                <Link style={{ textDecoration: 'none' }} onClick={play} to='/home'>
                     <p className={`${activeTab === "Home" ? "active" : ""}`}
                         onClick={() => setActiveTab("Home")}>
 
@@ -56,15 +56,27 @@ const Header = () => {
 
                 </Link>
 
+                <Link style={{ textDecoration: 'none' }} onClick={play} to='/myPlate'>
+                    <p className={`${activeTab === "MyPlate" ? "active" : ""}`}
+                        onClick={() => setActiveTab("MyPlate")}>
 
-                <Link onClick={play} to='/add'>
+                        MyPlate
+
+                    </p>
+
+
+                </Link>
+
+
+
+                <Link style={{ textDecoration: 'none' }} onClick={play} to='/add'>
                     <p className={`${activeTab === "AddContact" ? "active" : ""}`}
                         onClick={() => setActiveTab("AddContact")}>
                         AddMyPlate
                     </p>
 
                 </Link>
-                <Link onClick={logoutUser} >
+                <Link style={{ textDecoration: 'none' }} onClick={logoutUser} >
                     <p className={`${activeTab === "About" ? "active" : ""}`}
                         onClick={() => setActiveTab("About")}>
                         Sign out
