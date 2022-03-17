@@ -5,9 +5,10 @@ import { useUserContext } from "../context/userContext";
 import fireDb from '../firebase'
 import { toast } from 'react-toastify';
 import Fadein from 'react-fade-in'
-import './MyPlate.css';
 import Footer from '../components/Footer';
-const MyPlate = () => {
+import './Setting.css';
+
+const Setting = () => {
     const { user, logoutUser } = useUserContext();
     const [data, setData] = useState({});
     const history = useHistory();
@@ -24,6 +25,7 @@ const MyPlate = () => {
             })
         }
     }
+
     const routeChange = () => {
         let path = `./`;
         history.push(path);
@@ -41,49 +43,25 @@ const MyPlate = () => {
     useEffect(() => {
 
         fireDb.child("plates").orderByChild("email").equalTo(user.email).on("value", (snapshot) => {
-            console.log("rrrroo", snapshot.val());
+
             const data = snapshot.val();
             setData(data);
-            console.log(data);
+            const timer = setTimeout(() => console.log('Initial timeout!'), 5000);
+
         })
     }, []);
 
 
-
     return (
-
         <div>
             <Header></Header>
             <Footer></Footer>
-            <img className="caricon" src={require('./caricon.png')} />
-            <Fadein transitionDuration={5000}>
-                {Object.keys(data).map((id, index) => {
-                    return (<>
-                        <div>
-                            <h1 className='result'>{data[id].plate}</h1>
-                            {/* <label style={{ fontSize: '20px' }} htmlFor='name'>Name:</label> */}
-                            <h2 className='top' >{data[id].name}</h2>
 
-                            <h2 className='top'>{data[id].email}</h2>
-
-
-
-                            <h2 className='top'>{data[id].contact}</h2>
-                        </div>
-                        {/* <button className='button' onClick={() => { onDelete(id); logoutUser() }}></button> */}
-
-                    </>
-                    )
-                })}
-            </Fadein>
-
-
-
-
-
-
-        </div >
+            <button className='delete' >About</button>
+            <button className='delete' onClick={redirectToDelete}>Erase my plate</button>
+            <button className='delete' onClick={logoutUser}>Logout</button>
+        </div>
     )
 }
 
-export default MyPlate
+export default Setting

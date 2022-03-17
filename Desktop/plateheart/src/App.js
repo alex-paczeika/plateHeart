@@ -9,14 +9,13 @@ import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Header from './components/Header';
 import Search from './pages/Search';
-import Help from './pages/Help';
 import AuthBase from './AuthBase';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import { useLocation } from 'react-router-dom';
 import UserRoute from './Routers/UserRoute';
 import MyPlate from './pages/MyPlate';
 import fireDb from "./firebase";
-
+import Setting from './pages/Setting'
 
 function App() {
 
@@ -42,7 +41,7 @@ function App() {
             <UserRoute path="/about" component={About}></UserRoute>
             <UserRoute path="/search" component={Search}></UserRoute>
             <UserRoute path="/myPlate" component={MyPlate}></UserRoute>
-            <UserRoute path="/help" component={Help}></UserRoute>
+            <UserRoute path="/setting" component={Setting}></UserRoute>
 
           </Switch>
         </div>
