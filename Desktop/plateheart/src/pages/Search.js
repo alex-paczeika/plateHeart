@@ -50,7 +50,6 @@ const Search = () => {
                             {Object.keys(data).map((id, index) => {
                                 return (
                                     <div className="head-text">
-
                                         <div >
                                             <Link to={`/view/${id}`}>
                                                 <button className='viewbutton' >

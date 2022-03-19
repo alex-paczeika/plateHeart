@@ -1,7 +1,9 @@
 import firebase from "firebase/compat/app";
 import "firebase/compat/database";
 import { initializeApp } from "firebase/app";
+import { getStorage } from 'firebase/storage';
 import { getAuth } from "firebase/auth";
+import { a } from "react-spring";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCHxJjb_PazDXXKMrgCZOjeSgBmMGwNd1k",
@@ -15,10 +17,6 @@ const firebaseConfig = {
 };
 
 
-const fireDb = firebase.initializeApp(firebaseConfig);
-export default fireDb.database().ref();
 
-export const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-
-
+export const app = initializeApp(firebaseConfig)
+export const storage = getStorage(app);

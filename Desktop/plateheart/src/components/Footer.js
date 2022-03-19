@@ -22,6 +22,11 @@ const Footer = () => {
             const img3 = document.getElementById('img3');
             img3.setAttribute('src', 'https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/settingred.png?alt=media&token=880168b7-9154-474e-acdc-463ad9dcd401');
         }
+        else if (location.pathname === '/notifications') {
+            // setActiveTab('setting')
+            const img4 = document.getElementById('img4');
+            img4.setAttribute('src', 'https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/notificationred.png?alt=media&token=75fb45ca-84d9-454a-90f3-aa9efa5a0a46');
+        }
 
     }, [location]);
 
@@ -35,6 +40,9 @@ const Footer = () => {
                 </Link>
                 <Link style={{ textDecoration: 'none' }} to='/myPlate'>
                     <img id='img2' className='logofooter' src={require('../assets/myprofile.png')} />
+                </Link>
+                <Link style={{ textDecoration: 'none' }} to='/notifications'>
+                    <img id='img4' className='logofooter' src={require('../assets/notification.png')} />
                 </Link>
                 <Link style={{ textDecoration: 'none' }} to='/setting'>
                     <img id='img3' className='logofooter' src={require('../assets/setting.png')} />

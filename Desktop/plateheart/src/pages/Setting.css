@@ -1,18 +1,120 @@
-.delete {
-  background-color: transparent;
+.about {
+  background-color: white;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   float: inherit;
   color: black;
-  text-align: center;
-  padding: 10px;
+  padding: 13px;
   text-decoration: none;
-  font-size: 25px;
-  line-height: 25px;
-  border-radius: 30px;
-  margin-top: 100px;
-  /* margin-left: 30px;
-    margin-right: 30px; */
-  border-color: black;
-  display: block;
+  font-size: 20px;
+  border-color: rgb(255, 255, 255);
+  margin: 0;
+  opacity: 70%;
+  border-radius: 0.1px;
+  position: absolute;
+  width: 180%;
+  top: 30%;
+  left: 10%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.share {
+  background-color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  float: inherit;
+  color: black;
+  padding: 13px;
+  text-decoration: none;
+  font-size: 20px;
+  opacity: 70%;
+  border-color: rgb(255, 255, 255);
+  margin: 0;
+  position: absolute;
+  border-radius: 0.1px;
+  width: 160%;
+  top: 40%;
+  left: 20%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.logout {
+  background-color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  float: inherit;
+  color: black;
+  padding: 13px;
+  text-decoration: none;
+  font-size: 20px;
+  opacity: 70%;
+  border-color: rgb(255, 255, 255);
+  margin: 0;
+  position: absolute;
+  border-radius: 0.1px;
+  width: 100%;
+  top: 60%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.justlogo {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  float: inherit;
+  color: rgb(133, 96, 96);
+  padding: 13px;
+  text-decoration: none;
+  font-size: 20px;
+  border-color: rgb(255, 255, 255);
+  margin: 0;
+  position: absolute;
+  border-radius: 0.1px;
+  width: 10%;
+  top: 70%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.version {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  float: inherit;
+  color: black;
+  /* padding: 13px; */
+  text-decoration: none;
+  font-size: 15px;
+  opacity: 70%;
+  border-color: rgb(255, 255, 255);
+  margin: 0;
+  position: absolute;
+  border-radius: 0.1px;
+  width: 13%;
+  top: 75%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.delete {
+  background-color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  float: inherit;
+  color: black;
+  padding: 13px;
+  text-decoration: none;
+  font-size: 20px;
+  opacity: 70%;
+  border-color: rgb(255, 255, 255);
+  margin: 0;
+  position: absolute;
+  border-radius: 0.1px;
+  width: 100%;
+  top: 85%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }

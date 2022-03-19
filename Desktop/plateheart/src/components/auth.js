@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useUserContext } from "../context/userContext";
 import Signin from "./signin";
 import Signup from "./signup";
 
@@ -9,7 +8,6 @@ const Auth = () => {
     setIndex((prevState) => !prevState);
   };
 
-  const { signInWithGoogle, signInWithGithub } = useUserContext();
 
   return (
     <div className="container">

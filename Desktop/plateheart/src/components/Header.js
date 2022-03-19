@@ -37,7 +37,7 @@ const Header = () => {
     return (
         <div className='header'>
             <div >
-                <img className='logo' src={require('./logotext.png')} />
+                <img className='logo' src={require('./logotextwhite.png')} />
             </div>
 
             {/* <div className='header-right'>

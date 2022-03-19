@@ -7,16 +7,12 @@ import Home from './pages/Home';
 import View from './pages/View';
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import Header from './components/Header';
 import Search from './pages/Search';
 import AuthBase from './AuthBase';
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
-import { useLocation } from 'react-router-dom';
 import UserRoute from './Routers/UserRoute';
 import MyPlate from './pages/MyPlate';
-import fireDb from "./firebase";
 import Setting from './pages/Setting'
-
+import Notifications from './pages/Notifications';
 function App() {
 
 
@@ -24,14 +20,9 @@ function App() {
   return (
 
     <BrowserRouter>
-
       <div className='App'>
-
         <ToastContainer position='top-center'></ToastContainer>
-
         <div>
-
-
           <Switch>
             <Route exact path="/" component={AuthBase}></Route>
             <UserRoute exact path="/home" component={Home}></UserRoute>
@@ -42,11 +33,9 @@ function App() {
             <UserRoute path="/search" component={Search}></UserRoute>
             <UserRoute path="/myPlate" component={MyPlate}></UserRoute>
             <UserRoute path="/setting" component={Setting}></UserRoute>
-
+            <UserRoute path="/notifications" component={Notifications}></UserRoute>
           </Switch>
         </div>
-
-
       </div>
     </BrowserRouter >
   );
