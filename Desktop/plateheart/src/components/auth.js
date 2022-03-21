@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Signin from "./signin";
 import Signup from "./signup";
+import './auth.css';
 
 const Auth = () => {
   const [index, setIndex] = useState(false);
@@ -10,13 +11,14 @@ const Auth = () => {
 
 
   return (
-    <div className="container">
-      {!index ? <Signin /> : <Signup />}
+    <>
+      {!index ? <Signin /> : <Signup />
+      }
 
       <p onClick={toggleIndex}>
         {!index ? "New user? Click here " : "Already have an acount?"}
       </p>
-    </div>
+    </>
   );
 };
 

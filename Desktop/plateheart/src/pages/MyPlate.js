@@ -34,9 +34,12 @@ const MyPlate = () => {
                         <div>
                             <img className="profilePhoto" src={data[id].profilePhoto} />
                             <h1 className='result'>{data[id].plate}</h1>
-                            <h2 className='top' >{data[id].name}</h2>
-                            <h2 className='top'>{data[id].email}</h2>
-                            <h2 className='top'>{data[id].contact}</h2>
+                            <p className='nametitle' >Name</p>
+                            <h2 className='myname' >{data[id].name}</h2>
+                            <p className='emailtitle' >Email</p>
+                            <h2 className='myemail'>{data[id].email}</h2>
+                            <p className='instargramtitle' >Instagram</p>
+                            <h2 className='myinstagram'>{data[id].contact}</h2>
                         </div>
 
                     </>

@@ -127,12 +127,13 @@ const AddEdit = () => {
 
 
     return (
+
         <div style={{ marginTop: '0px' }}>
 
             <h3>Uploaded {progress}</h3>
             <form onSubmit={formHandler}>
 
-                <input type="file" className='input' ></input>
+                <input type="file" className='input'></input>
                 <button type="submit">Upload</button>
 
                 <img className='profilePhoto' src={imagine} ></img>
@@ -140,20 +141,22 @@ const AddEdit = () => {
             <form style={{ fontSize: '50px', margin: 'auto', padding: '15px', maxWidth: '300px ', alignContent: 'center' }}
                 onSubmit={handleSubmit}>
                 <div className='namefield' >
-                    <label style={{ fontSize: '25px' }} htmlFor='name'>My name is</label>
-                    <Fadein transitionDuration={5000}>
-                        <input type='text' id='name' name='name' placeholder='Ex. Ioana , Alex ' value={name} onChange={handlerInputChange}></input>
-                    </Fadein>
-                    <label style={{ fontSize: '25px' }} htmlFor='plate'>My plate number</label>
-                    <Fadein transitionDuration={5000}>
-                        <input type='plate' id='plate' name='plate' placeholder='For ex. TM01ZZZ' onInput={(e) => e.target.value = ("" + e.target.value).toUpperCase()} value={plate.toUpperCase()} onChange={handlerInputChange}></input>
-                    </Fadein>
-                    <label style={{ fontSize: '25px' }} htmlFor='contact'>My Instagram ID is</label>
-                    <Fadein transitionDuration={5000}>
-                        <input type='text' id='contact' name='contact' placeholder='Your Instagram ID...' value={contact} onChange={handlerInputChange}></input>
-                    </Fadein>
+                    {/* <label style={{ fontSize: '25px' }} htmlFor='name'>My name is</label> */}
+
+                    <input type='text' id='name' name='name' placeholder='Nickname' value={name} onChange={handlerInputChange}></input>
+
+                    {/* <label style={{ fontSize: '25px' }} htmlFor='plate'>My plate number</label> */}
+
+                    <input type='plate' id='plate' name='plate' placeholder='Car plate ex. TM01ZZZ' onInput={(e) => e.target.value = ("" + e.target.value).toUpperCase()} value={plate.toUpperCase()} onChange={handlerInputChange}></input>
+
+                    {/* <label style={{ fontSize: '25px' }} htmlFor='contact'>My Instagram ID is</label> */}
+
+                    <input type='text' id='contact' name='contact' placeholder='Instagram ID' value={contact} onChange={handlerInputChange}></input>
+
+
                 </div>
-                <input className='save' type='submit' value='Save'></input>
+                <input className='save' type='submit' value='Next'></input>
+                <p className='agree'>By taping next, you agree to our Terms . Learn how we collect, use and share your data in our Data Policy and how we use cookies and similar technology in our Cookies Policy .</p>
             </form>
         </div >
     )

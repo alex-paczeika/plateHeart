@@ -8,7 +8,7 @@
   font-weight: bold;
   /* padding: 1px; */
   /* margin: 12px 0; */
-  box-shadow: 0 1px 6px #ccc;
+  box-shadow: 0px 1px 6px #f85464;
   /* margin-top: 40px; */
   /* margin-bottom: 80px; */
   /* width: 25%; */
@@ -22,14 +22,85 @@
   width: 220px;
   height: auto;
 }
-.top {
-  float: left;
-  margin-left: 20%;
+.myname {
+  background-color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  float: inherit;
+  color: black;
+  padding: 13px;
+  text-decoration: none;
+  font-size: 20px;
+  opacity: 70%;
+  border-color: rgb(255, 255, 255);
+  margin: 0;
+  position: absolute;
+  border-radius: 0.1px;
+  width: 100%;
+  margin-top: -10px;
+  /* top: 65%;
+  left: 50%; */
+  /* -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
+}
+.nametitle {
+  margin-top: 12%;
+  font-weight: bold;
+  text-align: left;
+}
+.emailtitle {
+  margin-top: 18%;
+  font-weight: bold;
+  text-align: left;
+}
+.instargramtitle {
+  margin-top: 18%;
+  font-weight: bold;
+  text-align: left;
+}
+.myemail {
+  background-color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  float: inherit;
+  color: black;
+  padding: 13px;
+  text-decoration: none;
+  font-size: 20px;
+  opacity: 70%;
+  border-color: rgb(255, 255, 255);
+  margin: 0;
+  position: absolute;
+  border-radius: 0.1px;
+  width: 100%;
+  margin-top: -10px;
+}
+.myinstagram {
+  background-color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  float: inherit;
+  color: black;
+  padding: 13px;
+  text-decoration: none;
+  font-size: 20px;
+  opacity: 70%;
+  border-color: rgb(255, 255, 255);
+  margin: 0;
+  position: absolute;
+  border-radius: 0.1px;
+  width: 100%;
+  margin-top: -10px;
+  /* top: 85%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 
 .profilePhoto {
   width: 200px;
   height: 200px;
+  margin-top: -10px;
   object-fit: cover;
   border-radius: 50%;
 }

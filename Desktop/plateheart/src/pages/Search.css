@@ -1,65 +1,3 @@
-/* h1 {
-  margin: 2em 0 0;
-  font-size: 2em;
-  font-family: helvetica, ariel, sans-serif;
-  text-align: center;
-}
-
-h2 {
-  margin: 1em 0 2em;
-  font-size: 1.4em;
-  font-family: helvetica, ariel, sans-serif;
-  text-align: center;
-}
-
-.codepen-wrapper {
-  width: 100%;
-  margin: 0 0;
-}
-
-.registration-ui {
-  background: linear-gradient(to bottom, #4e5961 0%, #4e5961 100%);
-  padding: 0.25em 1em 0.25em 1.75em;
-  font-weight: bold;
-  font-size: 2em;
-  border-radius: 5px;
-  border: 1px solid #000;
-  box-shadow: 1px 1px 1px #4e5961;
-  position: relative;
-  font-family: helvetica, ariel, sans-serif;
-}
-
-.registration-ui:before {
-  content: "EU";
-  display: block;
-  width: 30px;
-  height: 100%;
-  background: #063298;
-  position: center;
-  top: 0;
-  border-radius: 5px 0 0 5px;
-  color: #f8d038;
-  font-size: 0.5em;
-  line-height: 85px;
-  padding-left: 5px;
-}
-
-.registration-ui:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 7px;
-  left: 5px;
-  width: 20px;
-  height: 20px;
-  border-radius: 30px;
-  border: 1px dashed #f8d038;
-}
-.btn-view {
-  background-color: #252219;
-  color: white;
-  font-weight: bold;
-} */
 .loadingsearch {
   width: 300px;
   margin-bottom: 10px;
@@ -83,4 +21,26 @@ h2 {
   /* margin-bottom: 80px; */
   /* width: 25%; */
   border-radius: 6px;
+}
+.resultPlate {
+  font-size: 35px;
+  color: white;
+  background-color: #f24d51;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 1px;
+  margin: 10px 80px;
+  box-shadow: 0 1px 6px #ccc;
+  /* margin-top: 40px; */
+  /* margin-bottom: 80px; */
+  /* width: 25%; */
+  border-radius: 6px;
+}
+.searchbackground {
+  background-size: cover;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Fview.png?alt=media&token=14a0fc55-1b21-4ee3-8be3-61d80d93924c");
+  height: 110vh;
 }

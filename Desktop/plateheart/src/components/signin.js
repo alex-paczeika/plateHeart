@@ -10,12 +10,12 @@ const Signin = () => {
   const { signInUser, forgotPassword } = useUserContext();
   const [play] = useSound(boopSfx);
 
-  window.scrollTo(0, 0);
-  window.addEventListener("scroll", noscroll);
-  document.body.style.overflow = "hidden"
-  function noscroll() {
-    window.scrollTo(0, 0);
-  }
+  // window.scrollTo(0, 0);
+  // window.addEventListener("scroll", noscroll);
+  // document.body.style.overflow = "hidden"
+  // function noscroll() {
+  //   window.scrollTo(0, 0);
+  // }
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -35,7 +35,8 @@ const Signin = () => {
 
   return (
     <>
-      <img className='loginlogo' src={"https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Flogo.png?alt=media&token=7e06c248-f47e-4c0d-adae-06bf36129628"} />
+      <img className='loginlogo' src={"https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Fwhiteheart.png?alt=media&token=2209be75-bcf6-4b38-b7ec-f05aac5ffd96"} />
+      <img className='loginlogotext' src={"https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Flogotextwhite.png?alt=media&token=e5f2ca1c-18f1-46ea-a5ad-bb0929adbb82"} />
       <div className="form">
         <h2> Login </h2>
         <form onSubmit={onSubmit}>

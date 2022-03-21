@@ -37,22 +37,22 @@ const Search = () => {
     return (
         <>
 
-            < div styles={{ marginTop: '100px' }}>
+            < div className='searchbackground' >
                 <Header></Header>
                 <Footer></Footer>
                 {Object.keys(data).length === 0 ? (
                     <h2>No Search Found with that number {query.get("name")}. Be sure you write the plate number corectly.</h2>
                 ) : (
 
-                    <table className='styled-table'>
 
-                        <tbody>
-                            {Object.keys(data).map((id, index) => {
-                                return (
-                                    <div className="head-text">
-                                        <div >
-                                            <Link to={`/view/${id}`}>
-                                                <button className='viewbutton' >
+
+                    <div>
+                        {Object.keys(data).map((id, index) => {
+                            return (
+                                <div >
+                                    <div >
+                                        <Link to={`/view/${id}`}>
+                                            {/* <button className='viewbutton' >
                                                     <Fadein transitionDuration={7000}>
                                                         <div class='text-on-image'>
 
@@ -61,15 +61,16 @@ const Search = () => {
                                                         </div>
                                                     </Fadein>
 
-                                                </button>
-                                            </Link>
-                                        </div>
-
+                                                </button> */}
+                                            <button className='resultPlate'> {data[id].plate}</button>
+                                        </Link>
                                     </div>
-                                )
-                            })}
-                        </tbody>
-                    </table>
+
+                                </div>
+                            )
+                        })}
+                    </div>
+
 
                 )}
 
