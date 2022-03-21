@@ -8,16 +8,19 @@ import Footer from '../components/Footer';
 const Home = () => {
 
     const [data, setData] = useState({});
+
     const [search, setSearch] = useState('');
     const history = useHistory();
 
     //SETEAZA PAGINA FIXA FARA SCROLL
-    // window.scrollTo(0, 0);
-    // window.addEventListener("scroll", noscroll);
-    // document.body.style.overflow = "hidden"
-    // function noscroll() {
-    //     window.scrollTo(0, 0);
-    // }
+    window.scrollTo(0, 0);
+    window.addEventListener("scroll", noscroll);
+    document.body.style.overflow = "hidden"
+    function noscroll() {
+        window.scrollTo(0, 0);
+    }
+
+
 
 
 
@@ -32,6 +35,7 @@ const Home = () => {
 
         return () => {
             setData({})
+
         };
     }, []);
 
@@ -56,7 +60,7 @@ const Home = () => {
                     <input
                         type='text'
                         className='inputField'
-                        placeholder='🔍          type the plate'
+                        placeholder='🔍            type the plate ...'
                         onChange={(e) => setSearch(e.target.value.toLocaleUpperCase())}
                         value={search}
                     ></input>

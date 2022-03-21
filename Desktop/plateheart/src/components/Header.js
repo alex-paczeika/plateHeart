@@ -37,7 +37,7 @@ const Header = () => {
     return (
         <div className='header'>
             <div >
-                <img className='logo' src={require('./logotextwhite.png')} />
+                <img className='logo' src={"https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Flogotext.png?alt=media&token=76619059-8fef-413e-9cd5-33d2e0eac485"} />
             </div>
 
             {/* <div className='header-right'>

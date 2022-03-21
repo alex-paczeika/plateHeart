@@ -18,9 +18,9 @@ const About = (props) => {
 
             <Fadein transitionDuration={5000}>
                 <div >
-                    <img className='logoAbout' src={require('./logo.png')} />
+                    <img className='logoAbout' src={"https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Flogo.png?alt=media&token=7e06c248-f47e-4c0d-adae-06bf36129628"} />
                 </div>
-                <div >
+                {/* <div >
                     <img className='publicitylogo' src={require('./publicityfinal.png')} />
                 </div>
                 <div >
@@ -35,13 +35,13 @@ const About = (props) => {
 
                 <div >
                     <img className='publicitylogo' src={require('./marketingphoto.png')} />
-                </div>
+                </div> */}
                 <Link to='/add'>
                     <button onClick={play} className='Startnow'>Start Now</button>
                 </Link>
-                <div >
+                {/* <div >
                     <img className='' src={require('./finalbar.png')} />
-                </div>
+                </div> */}
             </Fadein>
         </div>
     )

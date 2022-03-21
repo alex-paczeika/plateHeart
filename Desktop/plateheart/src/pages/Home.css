@@ -1,5 +1,5 @@
 .styled-table {
-  margin: auto;
+  margin: -65px;
   /* font-size: 0.9em; */
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -38,7 +38,7 @@
   cursor: pointer;
 }
 .body {
-  background-image: url("carparking.jpg");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Fcarparking.png?alt=media&token=4e26f533-be9b-46d0-8706-443b82c0875f");
   background-size: cover;
 }
 .keyf {
@@ -75,32 +75,35 @@
   /* font-size: 0; */
 }
 .search:hover {
-  background-color: #747370;
+  background-color: rgb(206, 206, 206);
 }
 .search {
-  background-color: transparent;
+  background-color: white;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   float: center;
-  color: black;
+  color: rgb(151, 150, 150);
+  box-shadow: 2px 2px 8px white;
   text-align: center;
   padding: 10px;
   text-decoration: none;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 20px;
   line-height: 25px;
   border-radius: 30px;
-  margin-top: -5px;
-  border-color: rgb(141, 10, 10);
+  margin-top: 420px;
+  border-color: white;
 }
 .inputField {
   width: 85% !important;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  background-color: #ffffff;
+  background-color: white;
+  box-shadow: 2px 2px 8px white;
   /* text-align: center; */
   padding: 1px;
-  margin-top: 20px;
+  /* position: relative; */
+  margin-top: -20px;
   margin-right: 10px;
   font-size: 20px;
   /* font-weight: bold; */

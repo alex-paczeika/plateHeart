@@ -21,7 +21,7 @@ const Signup = () => {
 
   return (
     <>
-      <img className='signuplogo' src={require('./logo.png')} />
+      <img className='signuplogo' src={"https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Flogo.png?alt=media&token=7e06c248-f47e-4c0d-adae-06bf36129628"} />
       <div className="form">
         <h2> New User</h2>
         <form onSubmit={onSubmit}>
