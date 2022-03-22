@@ -57,9 +57,9 @@
   /* width: 25%; */
   border-radius: 6px;
 }
-.profilePhoto {
-  width: 200px;
-  height: 200px;
+.profilePhotoView {
+  width: 300px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 50%;
+  /* border-radius: 70%; */
 }

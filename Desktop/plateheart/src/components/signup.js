@@ -1,15 +1,14 @@
 import React, { useRef } from "react";
 import { useUserContext } from "../context/userContext";
 import './signup.css';
-import useSound from 'use-sound'
-import boopSfx from './buttonSound.mp3';
+
 
 const Signup = () => {
   const emailRef = useRef();
   const nameRef = useRef();
   const psdRef = useRef();
   const { registerUser } = useUserContext();
-  const [play] = useSound(boopSfx);
+
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -21,15 +20,18 @@ const Signup = () => {
 
   return (
     <>
-      <img className='signuplogo' src={"https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Flogo.png?alt=media&token=7e06c248-f47e-4c0d-adae-06bf36129628"} />
-      <div className="form">
-        <h2> New User</h2>
-        <form onSubmit={onSubmit}>
-          <input placeholder="Email" type="email" ref={emailRef} />
-          <input placeholder="Name" type="name" ref={nameRef} />
-          <input placeholder="Password" type="password" ref={psdRef} />
-          <button onClick={play} className="buttonSignUp" type="submit">Register</button>
-        </form>
+      <img className='loginlogo' src={"https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Fwhiteheart.png?alt=media&token=2209be75-bcf6-4b38-b7ec-f05aac5ffd96"} />
+      <img className='loginlogotext' src={"https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Flogotextwhite.png?alt=media&token=e5f2ca1c-18f1-46ea-a5ad-bb0929adbb82"} />
+      <div id="results" className="search-results">
+        <div className="form">
+          {/* <h2> New User</h2> */}
+          <form onSubmit={onSubmit}>
+            <input placeholder="Email" type="email" ref={emailRef} />
+            <input placeholder="Name" type="name" ref={nameRef} />
+            <input placeholder="Password" type="password" ref={psdRef} />
+            <button className="buttonSignUp" type="submit">Register</button>
+          </form>
+        </div>
       </div>
     </>
   );

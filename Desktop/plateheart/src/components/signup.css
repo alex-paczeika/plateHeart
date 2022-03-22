@@ -2,18 +2,15 @@
   width: 300px;
   height: auto;
 }
-.buttonSignUp:hover {
-  background-color: #f85464;
-}
+
 .buttonSignUp {
-  background-color: transparent;
+  background-color: white;
   border: none;
   color: black;
   padding: 12px;
-  margin: 12px 0;
+  margin: 20px 0;
   box-shadow: 0 1px 6px #ccc;
-  width: 100%;
+  width: 50%;
   border-radius: 6px;
-  border-color: black;
   font-size: 18px;
 }

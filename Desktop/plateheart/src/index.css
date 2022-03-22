@@ -12,17 +12,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.logi {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  flex-direction: column;
-  /* background-color: black;
-   */
-  background-size: cover;
-  background-image: url("https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2FScreenshot%202022-03-21%20at%2016.39.38.png?alt=media&token=6c6f7ccc-44db-40df-9f33-2e03ec044652s");
-}
+
 input {
   padding: 12px;
   margin: 12px;

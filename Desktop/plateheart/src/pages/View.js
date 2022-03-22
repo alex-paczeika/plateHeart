@@ -9,7 +9,7 @@ import { useUserContext } from "../context/userContext";
 
 const View = () => {
     const [userActive, setUserActive] = useState({});
-    const [counter, setCounter] = useState(0);
+
     const { id } = useParams();
     const [data, setData] = useState({});
     const { user, logoutUser } = useUserContext();
@@ -76,11 +76,15 @@ const View = () => {
             </h2>
             <h2>
                 <Fadein transitionDuration={6700}>
-                    <p className='' style={{ color: 'white' }}>{counter}</p>
-                    <img className="profilePhoto" src={userActive.profilePhoto} />
-                    <p className='result' style={{ color: 'white' }}> {userActive.contact}</p>
+
+                    <img className="profilePhotoView" src={userActive.profilePhoto} />
+                    <a href={'https://www.instagram.com/' + userActive.contact}  >
+
+                        <p className='result' style={{ color: 'white' }}> {userActive.contact}</p>
+                    </a>
+
                 </Fadein>
-                <img className='resize' src={require('https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Fprogressbar.gif?alt=media&token=597a5ae0-e4bf-44ab-b9a0-f50dc24f2b31')} />
+                {/* <img className='resize' src={require('https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Fprogressbar.gif?alt=media&token=597a5ae0-e4bf-44ab-b9a0-f50dc24f2b31')} /> */}
             </h2>
             <button onClick={likeMethod}  >Like</button>
             <Link to='/home'>

@@ -1,16 +1,20 @@
 .loginlogo {
-  width: 80px;
+  width: 45px;
   height: auto;
+  position: absolute;
+  top: 6px;
+  right: 68%;
 }
 .loginlogotext {
   width: 200px;
   height: auto;
+  position: absolute;
+  top: 0px;
+  right: 20%;
 }
-.buttonSignin:hover {
-  background-color: #f85464;
-}
+
 .buttonSignin {
-  background-color: transparent;
+  background-color: white;
   border: none;
   color: black;
   padding: 12px;
@@ -22,4 +26,40 @@
 }
 .form {
   background-color: transparent;
+}
+
+.logi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+  /* background-color: black;
+   */
+  background-size: cover;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2FScreenshot%202022-03-21%20at%2016.39.38.png?alt=media&token=6c6f7ccc-44db-40df-9f33-2e03ec044652s");
+}
+
+.showSignIn:disabled {
+  opacity: 0%;
+}
+.showSignIn {
+  /* position: absolute; */
+  top: 100px;
+  right: 0%;
+  background-color: transparent;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  float: center;
+  color: white;
+  box-shadow: 2px 2px 8px white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  /* font-weight: bold; */
+  font-size: 27px;
+  line-height: 25px;
+  border-radius: 30px;
+  /* margin-top: 420px; */
+  border-color: white;
 }

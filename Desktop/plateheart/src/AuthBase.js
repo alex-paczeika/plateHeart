@@ -4,6 +4,7 @@ import Dashboard from "./components/dashboard";
 import { useUserContext } from "./context/userContext";
 import About from './pages/About';
 import Home from './pages/Home';
+import LoadingToRedirect from './Routers/LoadingToRedirect';
 
 
 
@@ -14,7 +15,7 @@ const AuthBase = () => {
     return (
         <div className="logi">
             {error && <p className="error">{error}</p>}
-            {loading ? <h2>Loading...</h2> : <> {user ? <About></About> : <Auth />} </>}
+            {loading ? <LoadingToRedirect></LoadingToRedirect> : <> {user ? <About></About> : <Auth />} </>}
         </div >
     )
 }

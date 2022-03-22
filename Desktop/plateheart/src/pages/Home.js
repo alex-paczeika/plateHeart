@@ -13,12 +13,12 @@ const Home = () => {
     const history = useHistory();
 
     //SETEAZA PAGINA FIXA FARA SCROLL
-    // window.scrollTo(0, 0);
-    // window.addEventListener("scroll", noscroll);
-    // document.body.style.overflow = "hidden"
-    // function noscroll() {
-    //     window.scrollTo(0, 0);
-    // }
+    window.scrollTo(0, 0);
+    window.addEventListener("scroll", noscroll);
+    document.body.style.overflow = "hidden"
+    function noscroll() {
+        window.scrollTo(0, 0);
+    }
 
 
 
