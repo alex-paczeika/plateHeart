@@ -4,6 +4,7 @@ import { useUserContext } from "../context/userContext";
 import fireDb from '../firebase'
 import './Notifications.css'
 import Header from '../components/Header';
+import FadeIn from 'react-fade-in/lib/FadeIn';
 const Notifications = () => {
 
     const { user, logoutUser } = useUserContext();
@@ -26,45 +27,15 @@ const Notifications = () => {
 
 
 
-                setnumberLikes(Object.values(data[id].liked).length / 2)
+                setnumberLikes(Object.values(data[id].liked).filter((v, i, a) => a.indexOf(v) === i).length / 2)
 
 
-                // console.log(data[id].liked[`${cheile[0]}`]);
-
-
-
-
-
-                // Object.values(data[id].liked).filter((likeUser) => likeUser % 2 === 0).map((acc) => {
-
-                //     console.log(acc);
-                // }
-                // )
 
             })
 
 
         })
 
-        // Object.keys(data).map((id, index) => {
-        //     Object.values(data[id].liked).map(likeUser =>
-        //         fireDb.child("plates").orderByChild("plate").equalTo(likeUser).on("value", (snapshot) => {
-        //             const dataforPhoto = snapshot.val();
-        //             // setdataforPhoto([...dataforPhoto, tr]);
-
-        //             setdataforPhoto(dataforPhoto);
-
-        //             console.log("photoobject", dataforPhoto);
-
-
-
-        //         })
-        //     )
-
-
-
-
-        // })
 
 
     }, []);
@@ -73,16 +44,24 @@ const Notifications = () => {
         let photoObject = [];
         Object.keys(data).map((id, index) => {
 
+            // console.log(Object.keys(data[id].liked));
+            // const cheile = Object.keys(data[id].liked);
 
-            const cheile = Object.keys(data[id].liked);
 
 
-            for (let i = 0; i < cheile.length; i++) {
-                if (i % 2 != 0) {
-                    photoObject.push(data[id].liked[`${cheile[i]}`])
+
+
+            if (data[id].liked !== undefined) {
+                for (let i = 0; i < Object.keys(data[id].liked).length; i++) {
+                    if (i % 2 != 0) {
+                        photoObject.push(data[id].liked[`${Object.keys(data[id].liked)[i]}`])
+                    }
+
                 }
+            } else
+                return 3;
 
-            }
+
 
         }
 
@@ -90,22 +69,23 @@ const Notifications = () => {
         return photoObject;
     }
 
+
     function plateLikedObject() {
         let plateObject = [];
         Object.keys(data).map((id, index) => {
 
 
-            const cheile = Object.keys(data[id].liked);
 
-            for (let i = 0; i < cheile.length; i++) {
-                if (i % 2 === 0) {
-                    plateObject.push(data[id].liked[`${cheile[i]}`])
+            if (data[id].liked !== undefined) {
+                for (let i = 0; i < Object.keys(data[id].liked).length; i++) {
+                    if (i % 2 === 0) {
+                        plateObject.push(data[id].liked[`${Object.keys(data[id].liked)[i]}`])
+                    }
+
                 }
-
-            }
-
+            } else
+                return 3;
         }
-
         )
 
         return plateObject;
@@ -114,11 +94,10 @@ const Notifications = () => {
 
 
 
-    console.log(photosLikedObject(), plateLikedObject());
+
     return (
         <div>
             <Header></Header>
-            <h1>Likes</h1>
 
 
 
@@ -131,43 +110,35 @@ const Notifications = () => {
 
                 return (<>
                     <div>
-                        {plateLikedObject() === "undefined" ? <h2>nu ai likeuri frt</h2> :
-                            Object.values(plateLikedObject()).map(likePlate => <h2 className='profilePlateLike'>{likePlate}</h2>)}
+                        {data[id].liked === undefined ? (
 
-                        {plateLikedObject() === "undefined" ? <h2>nu ai likeuri frt</h2> :
-                            Object.values(photosLikedObject()).map(likePhoto => <img className='profilePhotoLike' src={likePhoto}></img>)}
+                            <>
 
-                        {/* <p>{testooo()}</p>
-                        <img src={testooo()[0]} ></img> */}
+                                <img className='likePhotoNotification' src='https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Flikephoto.png?alt=media&token=c5f9ef4c-32d0-4b32-b2d7-ef65065a35af'></img>
+                                {/* <p >Welcome to PlateHeart,<br /> {data[id].name}</p> */}
+                                <h2>Activity</h2>
+                                <p >When someone likes you profile,<br />you'll see it here.</p>
+                            </>
 
-                        {/* {typeof data[id].liked === "undefined" ? <h2>nu ai likeuri frt</h2> :
-                            Object.values(data[id].liked).filter((likeUser) => likeUser % 2 === 0).map((acc) => <h2>{acc}</h2>)} */}
-
-                        {/* {Object.values(data[id].liked).map(likeUser => {
-
-                            fireDb.child("plates").orderByChild("plate").equalTo(likeUser).on("value", (snapshot) => {
-                                const dataforPhoto = snapshot.val();
-                                // setdataforPhoto(dataforPhoto); 
-                                <h1>tessst</h1>
-                                Object.keys(dataforPhoto).map((id, index) => {
-                                    console.log(id);
-                                })
-                                // console.log("photoobject", dataforPhoto);
+                        ) : (
+                            <FadeIn>
+                                <div className='row'>
+                                    <div className='column' >
+                                        {Object.values(photosLikedObject()).filter((v, i, a) => a.indexOf(v) === i).map(likePhoto => <img className='profilePhotoLike' src={likePhoto}></img>)}
 
 
+                                    </div>
+                                    <div className='column'>
 
-                            })
-                        }
-
-
-
-                        )} */}
+                                        {Object.values(plateLikedObject()).filter((v, i, a) => a.indexOf(v) === i).map(likePlate => <h3 className='profilePlateLike'>{likePlate} liked your profile. </h3>)}
+                                    </div>
 
 
+                                </div>
+                            </FadeIn>
+                        )}
 
                     </div>
-
-
 
 
                 </>
@@ -179,7 +150,7 @@ const Notifications = () => {
 
 
 
-        </div>
+        </div >
     )
 }
 

@@ -13,12 +13,12 @@ const Home = () => {
     const history = useHistory();
 
     //SETEAZA PAGINA FIXA FARA SCROLL
-    window.scrollTo(0, 0);
-    window.addEventListener("scroll", noscroll);
-    document.body.style.overflow = "hidden"
-    function noscroll() {
-        window.scrollTo(0, 0);
-    }
+    // window.scrollTo(0, 0);
+    // window.addEventListener("scroll", noscroll);
+    // document.body.style.overflow = "hidden"
+    // function noscroll() {
+    //     window.scrollTo(0, 0);
+    // }
 
 
 
@@ -53,10 +53,23 @@ const Home = () => {
         < div className='body' styles={{ marginTop: '0px' }}>
             <Header></Header>
             <Footer></Footer>
-            <Fadein transitionDuration={5000}>
-                <table className='styled-table'>
-                </table>
-                <form className='form' onSubmit={handleSubmit} style={{ display: 'inline', }}>
+            {/* <Fadein transitionDuration={5000}> */}
+            <table className='styled-table'>
+            </table>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+            <form className='formHome' onSubmit={handleSubmit} >
+                <input
+                    className='inputHome'
+                    onChange={(e) => setSearch(e.target.value.toLocaleUpperCase())}
+                    value={search}
+                    type="search"
+                    placeholder="Search here ..." />
+
+                <i onClick={handleSubmit} class="fa fa-search"></i>
+                {/* <button className='searchButton'>Find the crush</button> */}
+            </form>
+
+            {/* <form className='form' onSubmit={handleSubmit} style={{ display: 'inline', }}>
                     <input
                         type='text'
                         className='inputField'
@@ -66,8 +79,8 @@ const Home = () => {
                     ></input>
                     <p>{`\n`}</p>
                     <button className='search'>Find the crush</button>
-                </form>
-            </Fadein>
+                </form> */}
+            {/* </Fadein> */}
         </div >
     )
 }

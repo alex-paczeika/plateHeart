@@ -1,12 +1,42 @@
 .profilePhotoLike {
-  width: 70px;
-  height: 70px;
+  width: 63px;
+  height: 63px;
   display: flex;
-  margin-top: 15px;
   object-fit: cover;
   border-radius: 50%;
 }
 .profilePlateLike {
-  display: flex;
-  float: right;
+  margin-bottom: 22.5px;
 }
+
+.likePhotoNotification {
+  margin-top: 30%;
+  width: 20%;
+  height: auto;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  display: flex;
+  flex-direction: column-reverse;
+  float: left;
+  /* width: 10%; */
+
+  padding: 5px;
+  /* margin-top: 20px; */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  flex-direction: column-reverse;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+/* @media screen and (max-width: 15px) {
+  .column {
+    width: 100%;
+  }
+} */

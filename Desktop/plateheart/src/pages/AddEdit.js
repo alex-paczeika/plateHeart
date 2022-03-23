@@ -136,7 +136,7 @@ const AddEdit = () => {
                 <input type="file" className='input'></input>
                 <button type="submit">Upload</button>
 
-                <img className='profilePhoto' src={imagine} ></img>
+                <img className='AddprofilePhoto' src={imagine} ></img>
             </form>
             <form style={{ fontSize: '50px', margin: 'auto', padding: '15px', maxWidth: '300px ', alignContent: 'center' }}
                 onSubmit={handleSubmit}>

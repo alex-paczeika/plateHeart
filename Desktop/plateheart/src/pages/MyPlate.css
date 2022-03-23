@@ -1,4 +1,6 @@
-.result {
+.myplatecss {
+  margin-top: -4%;
+
   font-size: 30px;
   background-color: #f85464;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -13,6 +15,7 @@
   /* margin-bottom: 80px; */
   /* width: 25%; */
   border-radius: 6px;
+  position: absolute;
 }
 /* .body {
   height: 100vh;
@@ -22,44 +25,49 @@
   width: 220px;
   height: auto;
 }
+
 .myname {
-  background-color: white;
+  /* top: 20%; */
+
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  float: inherit;
+  /* float: inherit; */
   color: black;
-  padding: 13px;
+  /* padding: 13px; */
   text-decoration: none;
-  font-size: 20px;
-  opacity: 70%;
+  font-size: 35px;
+  /* opacity: 70%; */
   border-color: rgb(255, 255, 255);
   margin: 0;
   position: absolute;
   border-radius: 0.1px;
-  width: 100%;
-  margin-top: -10px;
+  /* width: 100%; */
+  margin-top: -13%;
+  margin-left: 5%;
   /* top: 65%;
   left: 50%; */
   /* -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); */
 }
-.nametitle {
+/* .nametitle {
   margin-top: 12%;
   font-weight: bold;
   text-align: left;
-}
+} */
 .emailtitle {
   margin-top: 18%;
   font-weight: bold;
   text-align: left;
+  opacity: 0%;
 }
 .instargramtitle {
-  margin-top: 18%;
+  margin-top: 25%;
   font-weight: bold;
   text-align: left;
+  opacity: 0%;
 }
 .myemail {
-  background-color: white;
+  /* background-color: #f85464; */
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   float: inherit;
@@ -67,13 +75,16 @@
   padding: 13px;
   text-decoration: none;
   font-size: 20px;
-  opacity: 70%;
+  opacity: 90%;
   border-color: rgb(255, 255, 255);
   margin: 0;
   position: absolute;
-  border-radius: 0.1px;
-  width: 100%;
-  margin-top: -10px;
+  /* border-radius: 0.5px; */
+  /* width: 100%; */
+  margin-top: 5%;
+  border-radius: 25px;
+  background: #f85464;
+  padding: 20px;
 }
 .myinstagram {
   background-color: white;
@@ -84,13 +95,16 @@
   padding: 13px;
   text-decoration: none;
   font-size: 20px;
-  opacity: 70%;
+  opacity: 90%;
   border-color: rgb(255, 255, 255);
   margin: 0;
   position: absolute;
-  border-radius: 0.1px;
-  width: 100%;
+  /* border-radius: 0.1px; */
+  /* width: 100%; */
   margin-top: -10px;
+  border-radius: 25px;
+  background: #f85464;
+  padding: 20px;
   /* top: 85%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
@@ -98,9 +112,89 @@
 }
 
 .profilePhoto {
-  width: 200px;
-  height: 200px;
-  margin-top: -10px;
+  width: 100%;
+  height: 30%;
+  margin-top: -20%;
   object-fit: cover;
-  border-radius: 50%;
+  position: relative;
+  /* border-radius: 100%; */
+}
+#myplatecontainer {
+  top: 50%;
+  left: 0%;
+  position: absolute;
+  border-radius: 25px;
+  /* border: 2px solid #73ad21; */
+  background-color: #f0f2f4;
+  padding: 5%;
+  width: 90%;
+  height: 15%;
+}
+
+.circular {
+  height: 100px;
+  width: 100px;
+  margin-left: 270px;
+  margin-top: -60px;
+  position: absolute;
+  transform: scale(0.7);
+}
+.circular .inner {
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  margin: -40px 0 0 -40px;
+  background: white;
+  border-radius: 100%;
+}
+.circular .number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+.circular .bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 100px, 100px, 50px);
+}
+.circle .bar .progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 50px, 100px, 0px);
+  background: #f85464;
+}
+.circle .left .progress {
+  z-index: 1;
+  animation: left 4s linear both;
+}
+@keyframes left {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+.circle .right {
+  transform: rotate(180deg);
+  z-index: 3;
+}
+.circle .right .progress {
+  animation: right 4s linear both;
+  animation-delay: 4s;
+}
+@keyframes right {
+  100% {
+    transform: rotate(180deg);
+  }
 }

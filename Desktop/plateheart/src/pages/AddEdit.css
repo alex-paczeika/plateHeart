@@ -22,9 +22,6 @@ input[type=" submit"] {
   border-radius: 4px;
   cursor: pointer;
 }
-input[type="submit"]:hover {
-  background-color: rgb(255, 0, 0);
-}
 
 .namefield {
   /* font-weight: bold;  */
@@ -61,11 +58,11 @@ input[type="submit"]:hover {
   /* top: 2px; */
   height: auto;
 }
-.profilePhoto {
+.AddprofilePhoto {
   width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 .agree {
   font-size: 15px;
