@@ -37,6 +37,8 @@ const View = () => {
 
     }
 
+
+
     useEffect(() => {
         fireDb.child("plates").orderByChild("email").equalTo(user.email).on("value", (snapshot) => {
             const data = snapshot.val();
@@ -66,32 +68,39 @@ const View = () => {
 
     return (
 
-        <div style={{ marginBottom: "100px" }}>
-            <Header></Header>
+        <>
 
-            <h2>
-                <Fadein transitionDuration={6700} >
-                </Fadein>
-                <img className='instagram' src={"https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Finstagram.png?alt=media&token=d659b1a7-9a98-435c-8906-3ac72c86d9c0"} />
-            </h2>
-            <h2>
-                <Fadein transitionDuration={6700}>
-
-                    <img className="profilePhotoView" src={userActive.profilePhoto} />
-                    <a href={'https://www.instagram.com/' + userActive.contact}  >
-
-                        <p className='result' style={{ color: 'white' }}> {userActive.contact}</p>
-                    </a>
-
-                </Fadein>
-                {/* <img className='resize' src={require('https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Fprogressbar.gif?alt=media&token=597a5ae0-e4bf-44ab-b9a0-f50dc24f2b31')} /> */}
-            </h2>
-            <button onClick={likeMethod}  >Like</button>
+            <img className="profilePhotoview" src={userActive.profilePhoto} />
             <Link to='/home'>
-                <button className='goback'>Go Back</button>
+                <img className='arrowbackview' src="https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Farrrow.png?alt=media&token=c254fb58-fe5f-4f9b-80fb-b64bde4c4bbe"></img>
             </Link>
-        </div >
+            <div id='myplatecontainerview'>
+
+                <Fadein transitionDuration={3000}>
+
+
+
+                    <h1 className='mynameview' >{userActive.name}</h1>
+                    <h2 className='myplatecssview'>{userActive.plate}</h2>
+
+
+
+                    <p className='instargramtitle' >Instagram</p>
+                    <h2 className='myinstagramview'>{userActive.contact}</h2>
+                    <button onClick={likeMethod}  >Like</button>
+                </Fadein>
+
+
+
+
+            </div>
+
+
+
+        </>
     )
 }
 
+
 export default View
+

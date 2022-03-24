@@ -1,7 +1,6 @@
 .about {
   background-color: white;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: GothamLight, serif;
   float: inherit;
   color: black;
   padding: 13px;
@@ -21,8 +20,7 @@
 
 .share {
   background-color: white;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: GothamLight, serif;
   float: inherit;
   color: black;
   padding: 13px;
@@ -42,8 +40,7 @@
 
 .logout {
   background-color: white;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: GothamLight, serif;
   float: inherit;
   color: black;
   padding: 13px;
@@ -61,8 +58,7 @@
   transform: translate(-50%, -50%);
 }
 .justlogo {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: GothamLight, serif;
   float: inherit;
   color: rgb(133, 96, 96);
   padding: 13px;
@@ -79,8 +75,7 @@
   transform: translate(-50%, -50%);
 }
 .version {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: GothamLight, serif;
   float: inherit;
   color: black;
   /* padding: 13px; */
@@ -100,8 +95,7 @@
 
 .delete {
   background-color: white;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: GothamLight, serif;
   float: inherit;
   color: black;
   padding: 13px;

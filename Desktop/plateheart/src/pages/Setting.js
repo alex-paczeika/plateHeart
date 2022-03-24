@@ -90,7 +90,7 @@ const Setting = () => {
             <button className='share' onClick={() => { toast.success("Copied to clipboard"); navigator.clipboard.writeText("Check out PlateHeart...you can find your crush after car plate https://plateheart.com") }}>
                 Share PlateHeart
             </button>
-            <img className="justlogo" src={"https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Fjustlogo.png?alt=media&token=27241bc5-2298-446e-8226-1190dce303ef"} />
+            <img className="justlogo" src={"https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Fwhiteheart.png?alt=media&token=2209be75-bcf6-4b38-b7ec-f05aac5ffd96"} />
             <h3 className='version' >Version 1.0.0</h3>
         </div>
     )

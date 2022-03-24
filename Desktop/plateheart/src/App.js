@@ -23,6 +23,9 @@ function App() {
       <div className='App'>
         <ToastContainer position='top-center'></ToastContainer>
         <div>
+
+
+
           <Switch>
             <Route exact path="/" component={AuthBase}></Route>
             <UserRoute exact path="/home" component={Home}></UserRoute>
@@ -35,6 +38,7 @@ function App() {
             <UserRoute path="/setting" component={Setting}></UserRoute>
             <UserRoute path="/notifications" component={Notifications}></UserRoute>
           </Switch>
+
         </div>
       </div>
     </BrowserRouter >

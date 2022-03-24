@@ -1,12 +1,12 @@
 .profilePhotoLike {
-  width: 63px;
-  height: 63px;
+  width: 60px;
+  height: 60px;
   display: flex;
   object-fit: cover;
   border-radius: 50%;
 }
 .profilePlateLike {
-  margin-bottom: 22.5px;
+  margin-bottom: 19px;
 }
 
 .likePhotoNotification {
@@ -22,7 +22,7 @@
   float: left;
   /* width: 10%; */
 
-  padding: 5px;
+  padding: 6px;
   /* margin-top: 20px; */
 }
 

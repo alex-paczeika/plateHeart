@@ -17,6 +17,7 @@ const MyPlate = () => {
     // }
 
     const numb = document.querySelector(".number");
+
     let counter = 0;
     setInterval(() => {
 

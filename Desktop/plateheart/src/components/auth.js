@@ -16,7 +16,7 @@ const Auth = () => {
       }
 
       <p onClick={toggleIndex}>
-        {!index ? <p style={{ color: "white" }} >New user? Click here</p> : <p style={{ color: "white" }} >Already have an account?</p>}
+        {!index ? <p style={{ color: "white", fontFamily: "GothamLight" }} >New user? Click here</p> : <p style={{ color: "white", fontFamily: "GothamLight" }} >Already have an account?</p>}
       </p>
     </>
   );

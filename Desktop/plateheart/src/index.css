@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: GothamLight, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: red;
@@ -67,4 +65,12 @@ input {
   font-weight: bold;
   max-width: 400px;
   margin-bottom: 18px;
+}
+
+@font-face {
+  font-family: "GothamLight";
+  src: local("GothamLight"),
+    url(./fonts/GothamRoundedLight_21020.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }

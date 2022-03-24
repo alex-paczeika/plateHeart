@@ -50,7 +50,7 @@ const Signin = () => {
 
         <input className="showSignIn" disabled={disable} type="submit" value="Start now" onClick={onClick} />
         {showResults ? (
-          <Fadein transitionDuration={5000}>
+          <Fadein transitionDuration={2000}>
             <div id="results" className="search-results">
 
               <div className="form">
@@ -59,7 +59,7 @@ const Signin = () => {
                   <input placeholder="Email" type="email" ref={emailRef} />
                   <input placeholder="Password" type="password" ref={psdRef} />
                   <button className="buttonSignin" type="submit">Sign In</button>
-                  <p style={{ color: "white" }} onClick={forgotPasswordHandler}>Forgot Password?</p>
+                  <p style={{ color: "white", fontFamily: "GothamLight" }} onClick={forgotPasswordHandler}>Forgot Password?</p>
 
                 </form>
               </div>
