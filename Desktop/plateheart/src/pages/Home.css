@@ -38,7 +38,8 @@
   cursor: pointer;
 }
 .body {
-  background-image: url("https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Fcarparking.png?alt=media&token=4e26f533-be9b-46d0-8706-443b82c0875f");
+  /* background-color: ;s */
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/plateheart-170b5.appspot.com/o/assets%2Fhomeback.png?alt=media&token=193f7f72-293c-49ec-bdf4-71645b5c2427");
   background-size: cover;
 }
 .keyf {
@@ -96,8 +97,8 @@
 }
 .inputField {
   width: 85% !important;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  /* font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif; */
   background-color: white;
   box-shadow: 2px 2px 8px white;
   /* text-align: center; */
@@ -123,6 +124,7 @@
 
 .formHome {
   position: absolute;
+  font-family: GothamLight, serif;
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -137,6 +139,7 @@
 }
 
 .inputHome {
+  font-family: GothamLight, serif;
   position: absolute;
   top: 0;
   left: 0;
@@ -155,8 +158,8 @@
   /* box-sizing: border-box; */
   /* margin-top: 100px; */
   padding: 15px;
-  width: 42.5px;
-  height: 42.5px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   top: 0;
   right: 0;

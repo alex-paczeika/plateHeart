@@ -3,8 +3,8 @@ import fireDb from '../firebase'
 import { useParams, Link } from 'react-router-dom/cjs/react-router-dom.min'
 import "./View.css";
 import Fadein from 'react-fade-in'
-import Header from '../components/Header';
 import { useUserContext } from "../context/userContext";
+import Heart from "react-animated-heart";
 
 
 const View = () => {
@@ -15,6 +15,7 @@ const View = () => {
     const { user, logoutUser } = useUserContext();
     const [whoLikePlate, sethoLikePlate] = useState("");
     const [whoLikePhoto, sethoLikePhoto] = useState();
+    const [isClick, setClick] = useState(false);
 
     function likeMethod() {
         console.log("show", whoLikePhoto);
@@ -66,6 +67,7 @@ const View = () => {
 
 
 
+
     return (
 
         <>
@@ -88,6 +90,8 @@ const View = () => {
                     <p className='instargramtitle' >Instagram</p>
                     <h2 className='myinstagramview'>{userActive.contact}</h2>
                     <button onClick={likeMethod}  >Like</button>
+
+
                 </Fadein>
 
 

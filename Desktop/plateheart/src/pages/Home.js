@@ -63,7 +63,7 @@ const Home = () => {
                     onChange={(e) => setSearch(e.target.value.toLocaleUpperCase())}
                     value={search}
                     type="search"
-                    placeholder="Search here ..." />
+                    placeholder="Type the plate ..." />
 
                 <i onClick={handleSubmit} class="fa fa-search"></i>
                 {/* <button className='searchButton'>Find the crush</button> */}

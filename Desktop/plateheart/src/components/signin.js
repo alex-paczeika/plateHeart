@@ -25,7 +25,6 @@ const Signin = () => {
 
 
 
-
   const onSubmit = (e) => {
     e.preventDefault();
     const email = emailRef.current.value;
@@ -56,7 +55,7 @@ const Signin = () => {
               <div className="form">
 
                 <form onSubmit={onSubmit}>
-                  <input placeholder="Email" type="email" ref={emailRef} />
+                  <input style={{ color: "white", fontFamily: "GothamLight" }} placeholder="Email" type="email" ref={emailRef} />
                   <input placeholder="Password" type="password" ref={psdRef} />
                   <button className="buttonSignin" type="submit">Sign In</button>
                   <p style={{ color: "white", fontFamily: "GothamLight" }} onClick={forgotPasswordHandler}>Forgot Password?</p>

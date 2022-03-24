@@ -4,6 +4,9 @@ import Signup from "./signup";
 import './auth.css';
 
 const Auth = () => {
+
+  // console.log('sdas', props.showResults);
+
   const [index, setIndex] = useState(false);
   const toggleIndex = () => {
     setIndex((prevState) => !prevState);

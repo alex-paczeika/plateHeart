@@ -26,9 +26,9 @@ const Signup = () => {
         <div className="form">
           {/* <h2> New User</h2> */}
           <form onSubmit={onSubmit}>
-            <input placeholder="Email" type="email" ref={emailRef} />
-            <input placeholder="Name" type="name" ref={nameRef} />
-            <input placeholder="Password" type="password" ref={psdRef} />
+            <input style={{ color: "white", fontFamily: "GothamLight" }} placeholder="Email" type="email" ref={emailRef} />
+            <input style={{ color: "white", fontFamily: "GothamLight" }} placeholder="Name" type="name" ref={nameRef} />
+            <input style={{ color: "white", fontFamily: "GothamLight" }} placeholder="Password" type="password" ref={psdRef} />
             <button className="buttonSignUp" type="submit">Register</button>
           </form>
         </div>
